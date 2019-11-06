@@ -8,14 +8,14 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Flask session无法传递变量 | 佛系测试</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="问题 前端vue框架 , 后端falsk   flask_session库, redis存储session, 线程之间session无法传递变量   解决过程1.因初次使用，配置相关都是模仿网上的博客稍加改动，最初怀疑是配置哪里少了东西，因为我单个文件直接写代码浏览器是有session的（因为只是在浏览器中调用，不存在跨域问题），疯狂百度2天…. 2.百度期间观察了redis的情况，发现每次操作都">
+  <meta name="description" content="问题 前端vue框架 , 后端falsk   flask_session库, redis存储session, 线程之间session无法传递变量   解决过程1.因初次使用，配置相关都是模仿网上的博客稍加改动，最初怀疑是配置哪里少了东西，因为我单个文件直接写代码浏览器是有session的（因为只是在浏览器中调用，不存在跨域问题），疯狂百度2天…. 2.百度期间观察了redis的情况，发现每次操作">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Flask session无法传递变量">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;06&#x2F;Flask-session%E6%97%A0%E6%B3%95%E4%BC%A0%E9%80%92%E5%8F%98%E9%87%8F&#x2F;index.html">
 <meta property="og:site_name" content="佛系测试">
-<meta property="og:description" content="问题 前端vue框架 , 后端falsk   flask_session库, redis存储session, 线程之间session无法传递变量   解决过程1.因初次使用，配置相关都是模仿网上的博客稍加改动，最初怀疑是配置哪里少了东西，因为我单个文件直接写代码浏览器是有session的（因为只是在浏览器中调用，不存在跨域问题），疯狂百度2天…. 2.百度期间观察了redis的情况，发现每次操作都">
+<meta property="og:description" content="问题 前端vue框架 , 后端falsk   flask_session库, redis存储session, 线程之间session无法传递变量   解决过程1.因初次使用，配置相关都是模仿网上的博客稍加改动，最初怀疑是配置哪里少了东西，因为我单个文件直接写代码浏览器是有session的（因为只是在浏览器中调用，不存在跨域问题），疯狂百度2天…. 2.百度期间观察了redis的情况，发现每次操作">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-06T04:04:34.241Z">
+<meta property="og:updated_time" content="2019-11-06T06:35:54.963Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="佛系测试" type="application/atom+xml">
@@ -64,7 +64,7 @@
 			</ul>
 		</nav>
 		<nav>
-   			 总文章数 4
+   			 总文章数 2
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -188,7 +188,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><blockquote>
+        <a id="more"></a>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><blockquote>
 <p>前端vue框架 , 后端falsk</p>
 </blockquote>
 <blockquote>
@@ -312,20 +313,15 @@ axios.defaults.withCredentials = true</code></pre><p>发现问题解决了，问
   
 <nav id="article-nav">
   
-    <a href="/2019/11/06/%E6%B5%8B%E8%AF%95%E6%91%98%E8%A6%81/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/11/06/Docker-%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          测试摘要
+          Docker 命令大全
         
       </div>
     </a>
   
-  
-    <a href="/2019/11/05/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">我的第一篇博客</div>
-      <i class="icon-circle-right"></i>
-    </a>
   
 </nav>
 

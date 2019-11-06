@@ -8,14 +8,14 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Docker 命令大全 | 佛系测试</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="docker启动命令systemctl start docker systemctl status docker systemctl stop docker开机自启动systemctl enable docker查看镜像docker images REPOSITORY: 镜像名称 TAG： 镜像标签 IMAGES ID： 镜像ID （唯一） CREATED: 镜像创建日期(不是下载日期) SIZ">
+  <meta name="description" content="docker 命令">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Docker 命令大全">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;06&#x2F;Docker-%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8&#x2F;index.html">
 <meta property="og:site_name" content="佛系测试">
-<meta property="og:description" content="docker启动命令systemctl start docker systemctl status docker systemctl stop docker开机自启动systemctl enable docker查看镜像docker images REPOSITORY: 镜像名称 TAG： 镜像标签 IMAGES ID： 镜像ID （唯一） CREATED: 镜像创建日期(不是下载日期) SIZ">
+<meta property="og:description" content="docker 命令">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-06T06:32:59.820Z">
+<meta property="og:updated_time" content="2019-11-06T06:35:48.389Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="佛系测试" type="application/atom+xml">
@@ -64,7 +64,7 @@
 			</ul>
 		</nav>
 		<nav>
-   			 总文章数 4
+   			 总文章数 2
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -188,48 +188,48 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
-<h1 id="docker启动命令"><a href="#docker启动命令" class="headerlink" title="docker启动命令"></a>docker启动命令</h1><pre><code>systemctl start docker
+        <h1 id="docker-命令"><a href="#docker-命令" class="headerlink" title="docker 命令"></a>docker 命令</h1><a id="more"></a>
+<h2 id="docker启动命令"><a href="#docker启动命令" class="headerlink" title="docker启动命令"></a>docker启动命令</h2><pre><code>systemctl start docker
 systemctl status docker
-systemctl stop docker</code></pre><h1 id="开机自启动"><a href="#开机自启动" class="headerlink" title="开机自启动"></a>开机自启动</h1><pre><code>systemctl enable docker</code></pre><h1 id="查看镜像"><a href="#查看镜像" class="headerlink" title="查看镜像"></a>查看镜像</h1><pre><code>docker images
+systemctl stop docker</code></pre><h2 id="开机自启动"><a href="#开机自启动" class="headerlink" title="开机自启动"></a>开机自启动</h2><pre><code>systemctl enable docker</code></pre><h2 id="查看镜像"><a href="#查看镜像" class="headerlink" title="查看镜像"></a>查看镜像</h2><pre><code>docker images
 REPOSITORY: 镜像名称
 TAG： 镜像标签
 IMAGES ID： 镜像ID （唯一）
 CREATED: 镜像创建日期(不是下载日期)
-SIZE： 镜像大小</code></pre><h1 id="搜索镜像"><a href="#搜索镜像" class="headerlink" title="搜索镜像"></a>搜索镜像</h1><pre><code>docker search centos
+SIZE： 镜像大小</code></pre><h2 id="搜索镜像"><a href="#搜索镜像" class="headerlink" title="搜索镜像"></a>搜索镜像</h2><pre><code>docker search centos
 NAME： 仓库名称
 DESCRIPTION: 镜像描述
 STARS: 用户评价，反应受欢迎程度
 OFFICIAL: 是否官方
-AUTOMATED: 自动构建，表示该镜像由Docter Hub自动构建流程创建的</code></pre><h1 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h1><pre><code>docker pull 仓库名称</code></pre><h1 id="删除镜像"><a href="#删除镜像" class="headerlink" title="删除镜像"></a>删除镜像</h1><pre><code>docker rmi 镜像ID
-docker rmi `docker images -q` (删除全部镜像)</code></pre><h1 id="创建-启动容器"><a href="#创建-启动容器" class="headerlink" title="创建-启动容器"></a>创建-启动容器</h1><pre><code>docker run
+AUTOMATED: 自动构建，表示该镜像由Docter Hub自动构建流程创建的</code></pre><h2 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h2><pre><code>docker pull 仓库名称</code></pre><h2 id="删除镜像"><a href="#删除镜像" class="headerlink" title="删除镜像"></a>删除镜像</h2><pre><code>docker rmi 镜像ID
+docker rmi `docker images -q` (删除全部镜像)</code></pre><h2 id="创建-启动容器"><a href="#创建-启动容器" class="headerlink" title="创建-启动容器"></a>创建-启动容器</h2><pre><code>docker run
 -i: 表示运行容器
 -t:表示容器启动后会进入其命令行。加入这俩个参数，容器创建就能登录进去，即分配一个伪终端
 --name: 为创建的容器命名
 -v: 表示目录映射关系（前者是宿主机目录，后者是映射到宿主机上的目录）
 -d: 加上-d,则会创建一个守护石容器在后台运行（不会自动登录，如果只加-i,-t俩个参数会自动登录）
--p: 表示</code></pre><h1 id="交互式运行容器"><a href="#交互式运行容器" class="headerlink" title="交互式运行容器"></a>交互式运行容器</h1><pre><code>docker run -it --name=mycentos centos:7(容器名字：TAG（latestTAG可以省略）) /bin/bash
+-p: 表示</code></pre><h2 id="交互式运行容器"><a href="#交互式运行容器" class="headerlink" title="交互式运行容器"></a>交互式运行容器</h2><pre><code>docker run -it --name=mycentos centos:7(容器名字：TAG（latestTAG可以省略）) /bin/bash
 执行完上面的命令进入容器，exit 退出容器
-退出结束运行</code></pre><h1 id="守护式运行"><a href="#守护式运行" class="headerlink" title="守护式运行"></a>守护式运行</h1><pre><code>docker run -di --name=mycentos2 centos:7 
+退出结束运行</code></pre><h2 id="守护式运行"><a href="#守护式运行" class="headerlink" title="守护式运行"></a>守护式运行</h2><pre><code>docker run -di --name=mycentos2 centos:7 
 运行完命令，一串加密字符串表示成功
 docker exec -it mycentos2 /bin/bash
 exit退出
-退出继续运行</code></pre><h1 id="停止启动容器"><a href="#停止启动容器" class="headerlink" title="停止启动容器"></a>停止启动容器</h1><pre><code>docker stop 容器ID
-docker start 容器ID</code></pre><h1 id="文件拷贝"><a href="#文件拷贝" class="headerlink" title="文件拷贝"></a>文件拷贝</h1><pre><code>docker cp 1.txt   mycentos2:/usr/local</code></pre><h1 id="文件目录挂载"><a href="#文件目录挂载" class="headerlink" title="文件目录挂载"></a>文件目录挂载</h1><pre><code>创建一个带有目录挂载的镜像
+退出继续运行</code></pre><h2 id="停止启动容器"><a href="#停止启动容器" class="headerlink" title="停止启动容器"></a>停止启动容器</h2><pre><code>docker stop 容器ID
+docker start 容器ID</code></pre><h2 id="文件拷贝"><a href="#文件拷贝" class="headerlink" title="文件拷贝"></a>文件拷贝</h2><pre><code>docker cp 1.txt   mycentos2:/usr/local</code></pre><h2 id="文件目录挂载"><a href="#文件目录挂载" class="headerlink" title="文件目录挂载"></a>文件目录挂载</h2><pre><code>创建一个带有目录挂载的镜像
 docker run -di --name=mycentos3 -v /usr/local/myhtml:/usr/local/myhtml centos:7
-挂载的目录，文件会自动同步</code></pre><h1 id="查看容器IP"><a href="#查看容器IP" class="headerlink" title="查看容器IP"></a>查看容器IP</h1><pre><code>docker inspect mycentos3
+挂载的目录，文件会自动同步</code></pre><h2 id="查看容器IP"><a href="#查看容器IP" class="headerlink" title="查看容器IP"></a>查看容器IP</h2><pre><code>docker inspect mycentos3
 # 筛选IP
-docker inspect --format=&apos;{{.NetworkSettings.IPAddress}}&apos; mycentos3</code></pre><h1 id="移除容器"><a href="#移除容器" class="headerlink" title="移除容器"></a>移除容器</h1><pre><code>docker stop mycentos3
-docker rm mycentos3     </code></pre><h1 id="mysql部署"><a href="#mysql部署" class="headerlink" title="mysql部署"></a>mysql部署</h1><pre><code>docker pull centos/mysql-57-centos7
+docker inspect --format=&apos;{{.NetworkSettings.IPAddress}}&apos; mycentos3</code></pre><h2 id="移除容器"><a href="#移除容器" class="headerlink" title="移除容器"></a>移除容器</h2><pre><code>docker stop mycentos3
+docker rm mycentos3     </code></pre><h2 id="mysql部署"><a href="#mysql部署" class="headerlink" title="mysql部署"></a>mysql部署</h2><pre><code>docker pull centos/mysql-57-centos7
 (宿主机33306映射容器3306)
 docker run -di --name=chj_mysql -p 33306:3306 -e MYSQL_ROOT_PASSWORD=123456 centos/mysql-57-centos7
-创建成功后，可以使用宿主机链接mysql，只是端口变成33306</code></pre><h1 id="tomcat部署"><a href="#tomcat部署" class="headerlink" title="tomcat部署"></a>tomcat部署</h1><pre><code>docker run -di --name=chj_tomcat -p 9000:8080 -v /usr/local/webapps:/usr/local/tomcat/webapps tomcat:7-jre7
+创建成功后，可以使用宿主机链接mysql，只是端口变成33306</code></pre><h2 id="tomcat部署"><a href="#tomcat部署" class="headerlink" title="tomcat部署"></a>tomcat部署</h2><pre><code>docker run -di --name=chj_tomcat -p 9000:8080 -v /usr/local/webapps:/usr/local/tomcat/webapps tomcat:7-jre7
 因为目录映射的问题，看不到欢迎界面
-/usr/local/webapps 路径下创建一个web应用（war包）</code></pre><h1 id="nginx部署"><a href="#nginx部署" class="headerlink" title="nginx部署"></a>nginx部署</h1><pre><code>docker run -di --name=chj_nginx -p 80:80  nginx
+/usr/local/webapps 路径下创建一个web应用（war包）</code></pre><h2 id="nginx部署"><a href="#nginx部署" class="headerlink" title="nginx部署"></a>nginx部署</h2><pre><code>docker run -di --name=chj_nginx -p 80:80  nginx
 配置文件：/etc/nginx/conf.d 
 默认页面：/usr/share/nginx/html
 1. 先把文件夹改成html
-2. docker cp html mynginx:/usr/share/nginx/html 直接覆盖</code></pre><h1 id="redis部署"><a href="#redis部署" class="headerlink" title="redis部署"></a>redis部署</h1><pre><code>docker run -di --name=chj_redis -p 6379:6379  redis</code></pre><h1 id="docker-备份与迁移"><a href="#docker-备份与迁移" class="headerlink" title="docker 备份与迁移"></a>docker 备份与迁移</h1><pre><code>1. 先把容器保存为镜像
+2. docker cp html mynginx:/usr/share/nginx/html 直接覆盖</code></pre><h2 id="redis部署"><a href="#redis部署" class="headerlink" title="redis部署"></a>redis部署</h2><pre><code>docker run -di --name=chj_redis -p 6379:6379  redis</code></pre><h2 id="docker-备份与迁移"><a href="#docker-备份与迁移" class="headerlink" title="docker 备份与迁移"></a>docker 备份与迁移</h2><pre><code>1. 先把容器保存为镜像
 docker commit mynginx(正在运行的容器) mynginx_i(镜像名称)
 docker images 
 
@@ -237,7 +237,7 @@ docker images
 docker save -o mynginx.tar(导出的文件名) mynginx_i(导出的镜像名)
 
 3. 导入镜像
-docker load -i mynginx.tar</code></pre><h1 id="Docker-私有仓库搭建与配置"><a href="#Docker-私有仓库搭建与配置" class="headerlink" title="Docker 私有仓库搭建与配置"></a>Docker 私有仓库搭建与配置</h1><pre><code>docker pull registry
+docker load -i mynginx.tar</code></pre><h2 id="Docker-私有仓库搭建与配置"><a href="#Docker-私有仓库搭建与配置" class="headerlink" title="Docker 私有仓库搭建与配置"></a>Docker 私有仓库搭建与配置</h2><pre><code>docker pull registry
 docker run --di  --name=registry -p 5000:5000 registry
 docker ps
 
@@ -361,8 +361,8 @@ docker push  ip:5000/镜像名字</code></pre>
 <nav id="article-nav">
   
   
-    <a href="/2019/11/06/%E6%B5%8B%E8%AF%95%E6%91%98%E8%A6%81/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">测试摘要</div>
+    <a href="/2019/11/06/Flask-session%E6%97%A0%E6%B3%95%E4%BC%A0%E9%80%92%E5%8F%98%E9%87%8F/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Flask session无法传递变量</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -389,7 +389,7 @@ docker push  ip:5000/镜像名字</code></pre>
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#docker启动命令"><span class="toc-number">1.</span> <span class="toc-text">docker启动命令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#开机自启动"><span class="toc-number">2.</span> <span class="toc-text">开机自启动</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#查看镜像"><span class="toc-number">3.</span> <span class="toc-text">查看镜像</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#搜索镜像"><span class="toc-number">4.</span> <span class="toc-text">搜索镜像</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#拉取镜像"><span class="toc-number">5.</span> <span class="toc-text">拉取镜像</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#删除镜像"><span class="toc-number">6.</span> <span class="toc-text">删除镜像</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#创建-启动容器"><span class="toc-number">7.</span> <span class="toc-text">创建-启动容器</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#交互式运行容器"><span class="toc-number">8.</span> <span class="toc-text">交互式运行容器</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#守护式运行"><span class="toc-number">9.</span> <span class="toc-text">守护式运行</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#停止启动容器"><span class="toc-number">10.</span> <span class="toc-text">停止启动容器</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#文件拷贝"><span class="toc-number">11.</span> <span class="toc-text">文件拷贝</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#文件目录挂载"><span class="toc-number">12.</span> <span class="toc-text">文件目录挂载</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#查看容器IP"><span class="toc-number">13.</span> <span class="toc-text">查看容器IP</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#移除容器"><span class="toc-number">14.</span> <span class="toc-text">移除容器</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#mysql部署"><span class="toc-number">15.</span> <span class="toc-text">mysql部署</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#tomcat部署"><span class="toc-number">16.</span> <span class="toc-text">tomcat部署</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#nginx部署"><span class="toc-number">17.</span> <span class="toc-text">nginx部署</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#redis部署"><span class="toc-number">18.</span> <span class="toc-text">redis部署</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#docker-备份与迁移"><span class="toc-number">19.</span> <span class="toc-text">docker 备份与迁移</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Docker-私有仓库搭建与配置"><span class="toc-number">20.</span> <span class="toc-text">Docker 私有仓库搭建与配置</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#docker-命令"><span class="toc-number">1.</span> <span class="toc-text">docker 命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#docker启动命令"><span class="toc-number">1.1.</span> <span class="toc-text">docker启动命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#开机自启动"><span class="toc-number">1.2.</span> <span class="toc-text">开机自启动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查看镜像"><span class="toc-number">1.3.</span> <span class="toc-text">查看镜像</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#搜索镜像"><span class="toc-number">1.4.</span> <span class="toc-text">搜索镜像</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#拉取镜像"><span class="toc-number">1.5.</span> <span class="toc-text">拉取镜像</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#删除镜像"><span class="toc-number">1.6.</span> <span class="toc-text">删除镜像</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建-启动容器"><span class="toc-number">1.7.</span> <span class="toc-text">创建-启动容器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#交互式运行容器"><span class="toc-number">1.8.</span> <span class="toc-text">交互式运行容器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#守护式运行"><span class="toc-number">1.9.</span> <span class="toc-text">守护式运行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#停止启动容器"><span class="toc-number">1.10.</span> <span class="toc-text">停止启动容器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文件拷贝"><span class="toc-number">1.11.</span> <span class="toc-text">文件拷贝</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文件目录挂载"><span class="toc-number">1.12.</span> <span class="toc-text">文件目录挂载</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查看容器IP"><span class="toc-number">1.13.</span> <span class="toc-text">查看容器IP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#移除容器"><span class="toc-number">1.14.</span> <span class="toc-text">移除容器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mysql部署"><span class="toc-number">1.15.</span> <span class="toc-text">mysql部署</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#tomcat部署"><span class="toc-number">1.16.</span> <span class="toc-text">tomcat部署</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#nginx部署"><span class="toc-number">1.17.</span> <span class="toc-text">nginx部署</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#redis部署"><span class="toc-number">1.18.</span> <span class="toc-text">redis部署</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#docker-备份与迁移"><span class="toc-number">1.19.</span> <span class="toc-text">docker 备份与迁移</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Docker-私有仓库搭建与配置"><span class="toc-number">1.20.</span> <span class="toc-text">Docker 私有仓库搭建与配置</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
