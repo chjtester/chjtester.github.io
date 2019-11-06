@@ -6,13 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019 | 佛系测试</title>
+  <title>数据库索引原理 | 佛系测试</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="佛系测试">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;archives&#x2F;2019&#x2F;index.html">
+  <meta name="description" content="索引">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据库索引原理">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;06&#x2F;%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B4%A2%E5%BC%95%E5%8E%9F%E7%90%86&#x2F;index.html">
 <meta property="og:site_name" content="佛系测试">
+<meta property="og:description" content="索引">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-11-06T14:19:28.039Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="佛系测试" type="application/atom+xml">
@@ -158,37 +161,92 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-数据库索引原理" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/06/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B4%A2%E5%BC%95%E5%8E%9F%E7%90%86/" class="archive-article-date">
-  	<time datetime="2019-11-06T14:18:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-06</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/06/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B4%A2%E5%BC%95%E5%8E%9F%E7%90%86/">数据库索引原理</a>
+    <h1 class="article-title" itemprop="name">
+      数据库索引原理
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
+        
+        <a href="/2019/11/06/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B4%A2%E5%BC%95%E5%8E%9F%E7%90%86/" class="archive-article-date">
+  	<time datetime="2019-11-06T14:18:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-06</time>
+</a>
+        
+	
+       
+          <span class="archive-article-date">
+              阅读量 <span id="busuanzi_value_page_pv"></span>
+          </span>
+        
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h1><a id="more"></a>
+<blockquote>
+<h3 id="什么是索引"><a href="#什么是索引" class="headerlink" title="什么是索引"></a>什么是索引</h3></blockquote>
+<ul>
+<li>一种提升查询性能的数据结构<blockquote>
+<h3 id="索引分类"><a href="#索引分类" class="headerlink" title="索引分类"></a>索引分类</h3></blockquote>
+</li>
+<li>B树索引</li>
+<li>位图索引</li>
+<li>反向索引</li>
+<li>全局哈希索引</li>
+<li>分区索引（略）<blockquote>
+<h3 id="索引的原理"><a href="#索引的原理" class="headerlink" title="索引的原理"></a>索引的原理</h3></blockquote>
+</li>
+<li>有索引，通过索引查询；无索引，全表扫描<blockquote>
+<h3 id="索引的数据结构"><a href="#索引的数据结构" class="headerlink" title="索引的数据结构"></a>索引的数据结构</h3></blockquote>
+<h3 id="索引为什么采用B-树数据结构"><a href="#索引为什么采用B-树数据结构" class="headerlink" title="索引为什么采用B+树数据结构?"></a>索引为什么采用B+树数据结构?</h3></li>
+<li>线性查找的弊端：极端情况下，效率很低，O(n)–随着数据量的增大，时间越长</li>
+<li>二分查找的弊端：极端情况下，效率很低，先排序还有额外的性能开销</li>
+<li>哈希查找的弊端：效率高，但是不能满足业务需求（&gt;、&lt;等）</li>
+<li>二叉树的弊端：极端情况下，二叉树会变成线性表，效率不大；</li>
+<li>红黑树的弊端：极端情况下，树高度很高（数据库的特性：每层高度会IO）</li>
+<li>B树： 1. 通过度这个节点来解决上面数据结构和算法的问题，<pre><code>2. 度概念是一次IO能读数据量，综合磁盘运行原理、程序局部性原理，一个度被数据库开发人员设置为4K。</code></pre></li>
+</ul>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>感谢支持<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -201,132 +259,118 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://yoursite.com/2019/11/06/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B4%A2%E5%BC%95%E5%8E%9F%E7%90%86/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/06/SQL%E8%AF%AD%E5%8F%A5%E4%BC%98%E5%8C%96/" class="archive-article-date">
-  	<time datetime="2019-11-06T13:27:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-06</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/11/06/SQL%E8%AF%AD%E5%8F%A5%E4%BC%98%E5%8C%96/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">SQL语句优化</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/06/SQL%E8%AF%AD%E5%8F%A5%E4%BC%98%E5%8C%96/">SQL语句优化</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/数据库，SQL//" class="article-tag-list-link color3">数据库，SQL</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#索引"><span class="toc-number">1.</span> <span class="toc-text">索引</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#什么是索引"><span class="toc-number">1.0.1.</span> <span class="toc-text">什么是索引</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#索引分类"><span class="toc-number">1.0.2.</span> <span class="toc-text">索引分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#索引的原理"><span class="toc-number">1.0.3.</span> <span class="toc-text">索引的原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#索引的数据结构"><span class="toc-number">1.0.4.</span> <span class="toc-text">索引的数据结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#索引为什么采用B-树数据结构"><span class="toc-number">1.0.5.</span> <span class="toc-text">索引为什么采用B+树数据结构?</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/06/Docker-%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/" class="archive-article-date">
-  	<time datetime="2019-11-06T06:32:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/06/Docker-%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/">Docker 命令大全</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/docker//" class="article-tag-list-link color2">docker</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/06/Flask-session%E6%97%A0%E6%B3%95%E4%BC%A0%E9%80%92%E5%8F%98%E9%87%8F/" class="archive-article-date">
-  	<time datetime="2019-11-06T03:56:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-06</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/06/Flask-session%E6%97%A0%E6%B3%95%E4%BC%A0%E9%80%92%E5%8F%98%E9%87%8F/">Flask session无法传递变量</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Flask//" class="article-tag-list-link color1">Flask</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
+  
 
 
           </div>
@@ -357,8 +401,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
