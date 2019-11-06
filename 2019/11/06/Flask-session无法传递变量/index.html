@@ -6,16 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hello World | 佛系测试</title>
+  <title>Flask session无法传递变量 | 佛系测试</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="问题 前端vue框架 , 后端falsk   flask_session库, redis存储session, 线程之间session无法传递变量   解决过程 因初次使用，配置相关都是模仿网上的博客稍加改动，最初怀疑是配置哪里少了东西，因为我单个文件直接写代码浏览器是有session的（因为只是在浏览器中调用，不存在跨域问题），疯狂百度2天….  百度期间观察了redis的情况，发现每次操作都生成">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;05&#x2F;hello-world&#x2F;index.html">
+<meta property="og:title" content="Flask session无法传递变量">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;06&#x2F;Flask-session%E6%97%A0%E6%B3%95%E4%BC%A0%E9%80%92%E5%8F%98%E9%87%8F&#x2F;index.html">
 <meta property="og:site_name" content="佛系测试">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="问题 前端vue框架 , 后端falsk   flask_session库, redis存储session, 线程之间session无法传递变量   解决过程 因初次使用，配置相关都是模仿网上的博客稍加改动，最初怀疑是配置哪里少了东西，因为我单个文件直接写代码浏览器是有session的（因为只是在浏览器中调用，不存在跨域问题），疯狂百度2天….  百度期间观察了redis的情况，发现每次操作都生成">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-05T15:05:45.226Z">
+<meta property="og:updated_time" content="2019-11-06T03:57:28.021Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="佛系测试" type="application/atom+xml">
@@ -64,7 +64,7 @@
 			</ul>
 		</nav>
 		<nav>
-   			 总文章数 3
+   			 总文章数 2
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -161,20 +161,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Flask-session无法传递变量" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      Flask session无法传递变量
     </h1>
   
 
         
-        <a href="/2019/11/05/hello-world/" class="archive-article-date">
-  	<time datetime="2019-11-05T15:05:45.226Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-05</time>
+        <a href="/2019/11/06/Flask-session%E6%97%A0%E6%B3%95%E4%BC%A0%E9%80%92%E5%8F%98%E9%87%8F/" class="archive-article-date">
+  	<time datetime="2019-11-06T03:56:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-06</time>
 </a>
         
 	
@@ -188,20 +188,27 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
+        <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><blockquote>
+<p>前端vue框架 , 后端falsk</p>
+</blockquote>
+<blockquote>
+<p>flask_session库, redis存储session, 线程之间session无法传递变量 </p>
+</blockquote>
+<h2 id="解决过程"><a href="#解决过程" class="headerlink" title="解决过程"></a>解决过程</h2><ol>
+<li><p>因初次使用，配置相关都是模仿网上的博客稍加改动，最初怀疑是配置哪里少了东西，因为我单个文件直接写代码浏览器是有session的（因为只是在浏览器中调用，不存在跨域问题），疯狂百度2天….</p>
+</li>
+<li><p>百度期间观察了redis的情况，发现每次操作都生成session，所以去jmeter中调用了一下接口，发现保存cookie的话只生成了一个session, 但是不保存cookie的情况下，还是一直生成session。</p>
+</li>
+<li><p>通过jmeter发现问题应该是cookie没有传递。</p>
+</li>
+<li><p>然后百度cookie跨域传递，在引入axios后加了一行代码</p>
+<pre><code>import axios from &apos;axios&apos;
+axios.defaults.withCredentials = true</code></pre></li>
+</ol>
+<p>发现问题解决了，问了一下开发，说是这样只能解决本地的问题，如果换成IP访问还是不行</p>
+<p>提供了一个思路是：把session的ID取出来，传递给前端，前端设置为Session Storage 或 Loacal Storage都可以</p>
+<p>提取session的方法：</p>
+<pre><code>sid = session.__dict__.get(&quot;sid&quot;)</code></pre>
       
 
       
@@ -236,6 +243,17 @@
       
       
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Flask//" class="article-tag-list-link color1">Flask</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -285,7 +303,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://yoursite.com/2019/11/05/hello-world/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://yoursite.com/2019/11/06/Flask-session%E6%97%A0%E6%B3%95%E4%BC%A0%E9%80%92%E5%8F%98%E9%87%8F/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -300,15 +318,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/11/05/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          我的第一篇博客
-        
-      </div>
-    </a>
   
+    <a href="/2019/11/05/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">我的第一篇博客</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -333,7 +347,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#问题"><span class="toc-number">1.</span> <span class="toc-text">问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解决过程"><span class="toc-number">2.</span> <span class="toc-text">解决过程</span></a></li></ol>
                     </div>
                 </span>
             </div>
