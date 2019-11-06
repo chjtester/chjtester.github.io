@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="佛系测试">
 <meta property="og:description" content="sql语句的基本优化">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-06T14:22:20.372Z">
+<meta property="og:updated_time" content="2019-11-06T14:25:40.005Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="佛系测试" type="application/atom+xml">
@@ -192,15 +192,15 @@
 <h1 id="insert语句优化"><a href="#insert语句优化" class="headerlink" title="insert语句优化"></a>insert语句优化</h1><ul>
 <li>有key时，先把索引去掉，写入之后在加上</li>
 </ul>
-<h1 id="select语句优化"><a href="#select语句优化" class="headerlink" title="select语句优化"></a>select语句优化</h1><h3 id="select-from-stu"><a href="#select-from-stu" class="headerlink" title="select * from stu"></a>select * from stu</h3><ol>
+<h1 id="select语句优化"><a href="#select语句优化" class="headerlink" title="select语句优化"></a>select语句优化</h1><h3 id="select-from-stu"><a href="#select-from-stu" class="headerlink" title="select * from stu"></a>select * from stu</h3><ul>
 <li>有索引的情况的，*会丢失索引</li>
 <li>获取了大量不需要的数据，加大IO开销，加大了网络传输开销。</li>
-</ol>
+</ul>
 <h3 id="in-和-exist"><a href="#in-和-exist" class="headerlink" title="in 和 exist"></a>in 和 exist</h3><ul>
 <li>外表数据量大用in，反之exist</li>
-<li>数据差不多的时候，随便用哪个<h3 id="模糊查询（select…like-abc-）"><a href="#模糊查询（select…like-abc-）" class="headerlink" title="模糊查询（select…like %abc%）"></a>模糊查询（select…like %abc%）</h3></li>
+<li>数据差不多的时候，随便用哪个</li>
 </ul>
-<h3 id="问题：-左边写“-”会索引失效；"><a href="#问题：-左边写“-”会索引失效；" class="headerlink" title="问题： 左边写“%”会索引失效；"></a>问题： 左边写“%”会索引失效；</h3><ul>
+<h3 id="模糊查询（select…like-abc-）-左边写“-”会索引失效；"><a href="#模糊查询（select…like-abc-）-左边写“-”会索引失效；" class="headerlink" title="模糊查询（select…like %abc%） 左边写“%”会索引失效；"></a>模糊查询（select…like %abc%） 左边写“%”会索引失效；</h3><ul>
 <li>优化一：select … like abc%;</li>
 <li>优化二：使用函数索引</li>
 </ul>
@@ -352,7 +352,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#sql语句的基本优化"><span class="toc-number">1.</span> <span class="toc-text">sql语句的基本优化</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#insert语句优化"><span class="toc-number">2.</span> <span class="toc-text">insert语句优化</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#select语句优化"><span class="toc-number">3.</span> <span class="toc-text">select语句优化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#select-from-stu"><span class="toc-number">3.0.1.</span> <span class="toc-text">select * from stu</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#in-和-exist"><span class="toc-number">3.0.2.</span> <span class="toc-text">in 和 exist</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#模糊查询（select…like-abc-）"><span class="toc-number">3.0.3.</span> <span class="toc-text">模糊查询（select…like %abc%）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题：-左边写“-”会索引失效；"><span class="toc-number">3.0.4.</span> <span class="toc-text">问题： 左边写“%”会索引失效；</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#sql语句的基本优化"><span class="toc-number">1.</span> <span class="toc-text">sql语句的基本优化</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#insert语句优化"><span class="toc-number">2.</span> <span class="toc-text">insert语句优化</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#select语句优化"><span class="toc-number">3.</span> <span class="toc-text">select语句优化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#select-from-stu"><span class="toc-number">3.0.1.</span> <span class="toc-text">select * from stu</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#in-和-exist"><span class="toc-number">3.0.2.</span> <span class="toc-text">in 和 exist</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#模糊查询（select…like-abc-）-左边写“-”会索引失效；"><span class="toc-number">3.0.3.</span> <span class="toc-text">模糊查询（select…like %abc%） 左边写“%”会索引失效；</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
