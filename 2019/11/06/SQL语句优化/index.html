@@ -6,13 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>佛系测试</title>
+  <title>SQL语句优化 | 佛系测试</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="佛系测试">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;index.html">
+  <meta name="description" content="sql语句的基本优化">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SQL语句优化">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;06&#x2F;SQL%E8%AF%AD%E5%8F%A5%E4%BC%98%E5%8C%96&#x2F;index.html">
 <meta property="og:site_name" content="佛系测试">
+<meta property="og:description" content="sql语句的基本优化">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-11-06T13:27:59.101Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="佛系测试" type="application/atom+xml">
@@ -158,16 +161,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-SQL语句优化" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-SQL语句优化" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/06/SQL%E8%AF%AD%E5%8F%A5%E4%BC%98%E5%8C%96/">SQL语句优化</a>
+    <h1 class="article-title" itemprop="name">
+      SQL语句优化
     </h1>
   
 
@@ -178,15 +179,69 @@
         
 	
        
+          <span class="archive-article-date">
+              阅读量 <span id="busuanzi_value_page_pv"></span>
+          </span>
+        
 
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="sql语句的基本优化"><a href="#sql语句的基本优化" class="headerlink" title="sql语句的基本优化"></a>sql语句的基本优化</h1>
-        
+        <h1 id="sql语句的基本优化"><a href="#sql语句的基本优化" class="headerlink" title="sql语句的基本优化"></a>sql语句的基本优化</h1><a id="more"></a>
+<h1 id="insert语句优化"><a href="#insert语句优化" class="headerlink" title="insert语句优化"></a>insert语句优化</h1><ul>
+<li>有key时，先把索引去掉，写入之后在加上<h1 id="select语句优化"><a href="#select语句优化" class="headerlink" title="select语句优化"></a>select语句优化</h1><blockquote>
+<p>select * from stu</p>
+</blockquote>
+</li>
+</ul>
+<ol>
+<li>有索引的情况的，*会丢失索引</li>
+<li>获取了大量不需要的数据，加大IO开销，加大了网络传输开销。</li>
+</ol>
+<blockquote>
+<p>in 和 exist</p>
+</blockquote>
+<ul>
+<li>外表数据量大用in，反之exist</li>
+<li>数据差不多的时候，随便用哪个<blockquote>
+<p>模糊查询（select…like %abc%）</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="问题：-左边写“-”会索引失效；"><a href="#问题：-左边写“-”会索引失效；" class="headerlink" title="问题： 左边写“%”会索引失效；"></a>问题： 左边写“%”会索引失效；</h4><ul>
+<li>优化一：select … like abc%;</li>
+<li>优化二：使用函数索引</li>
+</ul>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>感谢支持<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -206,16 +261,76 @@
 
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/06/SQL%E8%AF%AD%E5%8F%A5%E4%BC%98%E5%8C%96/">展开全文 >></a>
-        </p>
+
       
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://yoursite.com/2019/11/06/SQL%E8%AF%AD%E5%8F%A5%E4%BC%98%E5%8C%96/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
 
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2019/11/06/Docker-%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Docker 命令大全</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -230,174 +345,32 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Docker-命令大全" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/06/Docker-%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/">Docker 命令大全</a>
-    </h1>
-  
-
-        
-        <a href="/2019/11/06/Docker-%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/" class="archive-article-date">
-  	<time datetime="2019-11-06T06:32:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-06</time>
-</a>
-        
-	
-       
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="docker启动命令"><a href="#docker启动命令" class="headerlink" title="docker启动命令"></a>docker启动命令</h2><pre><code>systemctl start docker
-systemctl status docker
-systemctl stop docker</code></pre>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/docker//" class="article-tag-list-link color2">docker</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/06/Docker-%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#sql语句的基本优化"><span class="toc-number">1.</span> <span class="toc-text">sql语句的基本优化</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#insert语句优化"><span class="toc-number">2.</span> <span class="toc-text">insert语句优化</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#select语句优化"><span class="toc-number">3.</span> <span class="toc-text">select语句优化</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#问题：-左边写“-”会索引失效；"><span class="toc-number">3.0.0.1.</span> <span class="toc-text">问题： 左边写“%”会索引失效；</span></a></li></ol></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
-
   
-    <article id="post-Flask-session无法传递变量" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/06/Flask-session%E6%97%A0%E6%B3%95%E4%BC%A0%E9%80%92%E5%8F%98%E9%87%8F/">Flask session无法传递变量</a>
-    </h1>
   
 
-        
-        <a href="/2019/11/06/Flask-session%E6%97%A0%E6%B3%95%E4%BC%A0%E9%80%92%E5%8F%98%E9%87%8F/" class="archive-article-date">
-  	<time datetime="2019-11-06T03:56:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-06</time>
-</a>
-        
-	
-       
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><blockquote>
-<p>前端vue框架 , 后端falsk</p>
-</blockquote>
-<blockquote>
-<p>flask_session库, redis存储session, 线程之间session无法传递变量 </p>
-</blockquote>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Flask//" class="article-tag-list-link color1">Flask</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/06/Flask-session%E6%97%A0%E6%B3%95%E4%BC%A0%E9%80%92%E5%8F%98%E9%87%8F/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
+  
 
   
+
   
 
 
@@ -428,8 +401,8 @@ systemctl stop docker</code></pre>
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
