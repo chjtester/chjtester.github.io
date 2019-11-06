@@ -8,14 +8,14 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>SQL语句优化 | 佛系测试</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="sql语句的基本优化">
+  <meta name="description" content="insert语句优化">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SQL语句优化">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;06&#x2F;SQL%E8%AF%AD%E5%8F%A5%E4%BC%98%E5%8C%96&#x2F;index.html">
 <meta property="og:site_name" content="佛系测试">
-<meta property="og:description" content="sql语句的基本优化">
+<meta property="og:description" content="insert语句优化">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-06T14:25:40.005Z">
+<meta property="og:updated_time" content="2019-11-06T14:27:20.809Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="佛系测试" type="application/atom+xml">
@@ -188,8 +188,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="sql语句的基本优化"><a href="#sql语句的基本优化" class="headerlink" title="sql语句的基本优化"></a>sql语句的基本优化</h1><a id="more"></a>
-<h1 id="insert语句优化"><a href="#insert语句优化" class="headerlink" title="insert语句优化"></a>insert语句优化</h1><ul>
+        <h1 id="insert语句优化"><a href="#insert语句优化" class="headerlink" title="insert语句优化"></a>insert语句优化</h1><a id="more"></a>
+<ul>
 <li>有key时，先把索引去掉，写入之后在加上</li>
 </ul>
 <h1 id="select语句优化"><a href="#select语句优化" class="headerlink" title="select语句优化"></a>select语句优化</h1><h3 id="select-from-stu"><a href="#select-from-stu" class="headerlink" title="select * from stu"></a>select * from stu</h3><ul>
@@ -352,7 +352,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#sql语句的基本优化"><span class="toc-number">1.</span> <span class="toc-text">sql语句的基本优化</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#insert语句优化"><span class="toc-number">2.</span> <span class="toc-text">insert语句优化</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#select语句优化"><span class="toc-number">3.</span> <span class="toc-text">select语句优化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#select-from-stu"><span class="toc-number">3.0.1.</span> <span class="toc-text">select * from stu</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#in-和-exist"><span class="toc-number">3.0.2.</span> <span class="toc-text">in 和 exist</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#模糊查询（select…like-abc-）-左边写“-”会索引失效；"><span class="toc-number">3.0.3.</span> <span class="toc-text">模糊查询（select…like %abc%） 左边写“%”会索引失效；</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#insert语句优化"><span class="toc-number">1.</span> <span class="toc-text">insert语句优化</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#select语句优化"><span class="toc-number">2.</span> <span class="toc-text">select语句优化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#select-from-stu"><span class="toc-number">2.0.1.</span> <span class="toc-text">select * from stu</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#in-和-exist"><span class="toc-number">2.0.2.</span> <span class="toc-text">in 和 exist</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#模糊查询（select…like-abc-）-左边写“-”会索引失效；"><span class="toc-number">2.0.3.</span> <span class="toc-text">模糊查询（select…like %abc%） 左边写“%”会索引失效；</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
