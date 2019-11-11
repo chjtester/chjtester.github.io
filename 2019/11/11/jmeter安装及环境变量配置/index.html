@@ -6,13 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Category: 数据库，SQL | 佛系测试</title>
+  <title>jmeter安装及环境变量配置 | 佛系测试</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="佛系测试">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;categories&#x2F;%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%8CSQL&#x2F;index.html">
+  <meta name="description" content="1.首选去官网下载jmeter，个人推荐最新版，功能齐全切BUG较少http:&#x2F;&#x2F;jmeter.apache.org&#x2F;download_jmeter.cgi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jmeter安装及环境变量配置">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;11&#x2F;jmeter%E5%AE%89%E8%A3%85%E5%8F%8A%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE&#x2F;index.html">
 <meta property="og:site_name" content="佛系测试">
+<meta property="og:description" content="1.首选去官网下载jmeter，个人推荐最新版，功能齐全切BUG较少http:&#x2F;&#x2F;jmeter.apache.org&#x2F;download_jmeter.cgi">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-11-11T03:20:52.182Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="佛系测试" type="application/atom+xml">
@@ -158,61 +161,232 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-jmeter安装及环境变量配置" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/06/SQL%E8%AF%AD%E5%8F%A5%E4%BC%98%E5%8C%96/" class="archive-article-date">
-  	<time datetime="2019-11-06T13:27:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-06</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/06/SQL%E8%AF%AD%E5%8F%A5%E4%BC%98%E5%8C%96/">SQL语句优化</a>
+    <h1 class="article-title" itemprop="name">
+      jmeter安装及环境变量配置
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
+        
+        <a href="/2019/11/11/jmeter%E5%AE%89%E8%A3%85%E5%8F%8A%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE/" class="archive-article-date">
+  	<time datetime="2019-11-11T03:19:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-11</time>
+</a>
+        
+	
+       
+          <span class="archive-article-date">
+              阅读量 <span id="busuanzi_value_page_pv"></span>
+          </span>
+        
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>1.首选去官网下载jmeter，个人推荐最新版，功能齐全切BUG较少</strong><br><a href="http://jmeter.apache.org/download_jmeter.cgi">http://jmeter.apache.org/download_jmeter.cgi</a></p>
+<a id="more"></a>
+<p>windows安装：<br> 首先解压到指定文件夹<br><strong>2.环境变量的配置</strong><br>（1）“我的电脑”&gt;鼠标右键菜单&gt;”属性”&gt;”高级系统设置”&gt;”环境变量”；<br> ( 2 )   在系统变量中添加俩个属性 </p>
+<p> ①      JMETER_HOME=D:\apache-jmetes\apache-jmeter-4.0     (就是jmeter保存的路径)<br> ②      CLASSPATH=%JMETER_HOME%\lib\ext\ApacheJMeter_core.jar; %JMETER_HOME%\lib\jorphan.jar;<br>③  在用系统变量path后面加上%JMETER_HOME%\bin   注意是系统变量，不要忘记用“；”隔开<br><strong>3.JDK的下载安装</strong><br>链接：<a href="https://pan.baidu.com/s/1XCXQGeVVOlAMBC0oU_DUgw">https://pan.baidu.com/s/1XCXQGeVVOlAMBC0oU_DUgw</a><br>提取码：ih5u </p>
+<p><strong>4.jdk的环境变量</strong><br>1.系统变量→新建 JAVA_HOME 变量 。<br>变量值填写jdk的安装目录（如 E:\Java\jdk1.7.0)<br>2.系统变量→寻找 Path 变量→编辑<br>在变量值最后输入 %JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;<br>（注意原来Path的变量值末尾有没有;号，如果没有，先输入；号再输入上面的代码）<br>3.系统变量→新建 CLASSPATH 变量<br>4.变量值填写   .;%JAVA_HOME%\lib;%JAVA_HOME%\lib\tools.jar（注意最前面有一点）</p>
+<p>linux安装：</p>
+<pre><code>1. tar -zxvf apache-jmeter-5.1.1.tgz
+2. 使用wget下载jdk</code></pre><p>wget –no-cookies –no-check-certificate –header “Cookie: gpw_e24=http%3A%2F%2F<a href="http://www.oracle.com%2F">www.oracle.com%2F</a>; oraclelicense=accept-securebackup-cookie” “<a href="http://download.oracle.com/otn-pub/java/jdk/8u141-b15/336fa29ff2bb4ef291e347e091f7f4a7/jdk-8u141-linux-x64.tar.gz&quot;">http://download.oracle.com/otn-pub/java/jdk/8u141-b15/336fa29ff2bb4ef291e347e091f7f4a7/jdk-8u141-linux-x64.tar.gz&quot;</a></p>
+<pre><code>3.tar -zxvf jdk-8u141-linux-x64.tar.gz 
+4.mv jdk1.8.0_141 jdk1.8
+5.cd /usr/local/src/
+6.mkdir jdk
+7. mv jdk1.8 /usr/local/src/jdk</code></pre><p><strong>环境变量配置</strong></p>
+<pre><code>1..vi /etc/profileexport 
+2.新增如下内容：
+JAVA_HOME=/usr/local/src/jdk/jdk1.8
+export PATH=$PATH:$JAVA_HOME/bin
+export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+export PATH=/root/apache-jmeter-5.1.1/bin/:$PATH
+保存退出
+3.source /etc/profile
+4.java -version
+出现如下提示表示成功
+java version &quot;1.8.0_141&quot;
+Java(TM) SE Runtime Environment (build 1.8.0_141-b15)
+Java HotSpot(TM) 64-Bit Server VM (build 25.141-b15, mixed mode)
+5.jmeter -v</code></pre><p>出现APACHE JMETER表示安装成功</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>感谢支持<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/数据库，SQL//" class="article-tag-list-link color3">数据库，SQL</a>
+        			<a href="/categories/jmeter//" class="article-tag-list-link color2">jmeter</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/jmeter/性能测试//" class="article-tag-list-link color5">性能测试</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://yoursite.com/2019/11/11/jmeter%E5%AE%89%E8%A3%85%E5%8F%8A%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2019/11/11/jmeter%E5%88%86%E5%B8%83%E5%BC%8F%E6%90%AD%E5%BB%BA/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          jmeter分布式搭建
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2019/11/09/git-%E5%AE%89%E8%A3%85%E5%92%8C%E5%91%BD%E4%BB%A4/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">git 安装和命令</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    目录，不存在的…
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
 
+  
+
+  
 
 
           </div>
@@ -243,10 +417,10 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
-		isCategory: true,
+		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
 		root: "/",
