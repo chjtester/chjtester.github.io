@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="佛系测试">
 <meta property="og:description" content="国内下载Git地址https:&#x2F;&#x2F;github.com&#x2F;waylau&#x2F;git-for-win">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-11T03:55:45.209Z">
+<meta property="og:updated_time" content="2019-11-15T01:30:11.720Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="佛系测试" type="application/atom+xml">
@@ -64,7 +64,7 @@
 			</ul>
 		</nav>
 		<nav>
-   			 总文章数 10
+   			 总文章数 9
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -235,7 +235,22 @@
 <blockquote>
 <p>cat id_rsa.pub # 把公钥设置到github中 </p>
 </blockquote>
+<h3 id="11-更换仓库"><a href="#11-更换仓库" class="headerlink" title="11. 更换仓库"></a>11. 更换仓库</h3><blockquote>
+<p>git remote add origin  ssh地址</p>
+</blockquote>
+<h3 id="12-git删除未跟踪的文件"><a href="#12-git删除未跟踪的文件" class="headerlink" title="12. git删除未跟踪的文件"></a>12. git删除未跟踪的文件</h3><pre><code># 删除 untracked files
+git clean -f
 
+# 连 untracked 的目录也一起删掉
+git clean -fd
+
+# 连 gitignore 的untrack 文件/目录也一起删掉 （慎用，一般这个是用来删掉编译出来的 .o之类的文件用的）
+git clean -xfd
+
+# 在用上述 git clean 前，墙裂建议加上 -n 参数来先看看会删掉哪些文件，防止重要文件被误删
+git clean -nxfd
+git clean -nf
+git clean -nfd</code></pre>
       
 
       
@@ -383,7 +398,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#国内下载Git地址"><span class="toc-number">1.</span> <span class="toc-text">国内下载Git地址</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#window安装"><span class="toc-number">2.</span> <span class="toc-text">window安装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#本地Git初始化，提交"><span class="toc-number">3.</span> <span class="toc-text">本地Git初始化，提交</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-设置用户名"><span class="toc-number">3.0.1.</span> <span class="toc-text">1. 设置用户名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-设置用户名邮箱"><span class="toc-number">3.0.2.</span> <span class="toc-text">2. 设置用户名邮箱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-初始化目录"><span class="toc-number">3.0.3.</span> <span class="toc-text">3. 初始化目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-创建一个测试文件"><span class="toc-number">3.0.4.</span> <span class="toc-text">4. 创建一个测试文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-查看git状态"><span class="toc-number">3.0.5.</span> <span class="toc-text">5. 查看git状态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-添加到暂存区"><span class="toc-number">3.0.6.</span> <span class="toc-text">6. 添加到暂存区</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-暂存区文件提交到仓库"><span class="toc-number">3.0.7.</span> <span class="toc-text">7. 暂存区文件提交到仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-远程提交到仓库"><span class="toc-number">3.0.8.</span> <span class="toc-text">8. 远程提交到仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-克隆操作"><span class="toc-number">3.0.9.</span> <span class="toc-text">1. 克隆操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-本地仓库同步到远程仓库"><span class="toc-number">3.0.10.</span> <span class="toc-text">2. 本地仓库同步到远程仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-windows生成公钥"><span class="toc-number">3.0.11.</span> <span class="toc-text">9. windows生成公钥</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-查看公钥"><span class="toc-number">3.0.12.</span> <span class="toc-text">10. 查看公钥</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#国内下载Git地址"><span class="toc-number">1.</span> <span class="toc-text">国内下载Git地址</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#window安装"><span class="toc-number">2.</span> <span class="toc-text">window安装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#本地Git初始化，提交"><span class="toc-number">3.</span> <span class="toc-text">本地Git初始化，提交</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-设置用户名"><span class="toc-number">3.0.1.</span> <span class="toc-text">1. 设置用户名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-设置用户名邮箱"><span class="toc-number">3.0.2.</span> <span class="toc-text">2. 设置用户名邮箱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-初始化目录"><span class="toc-number">3.0.3.</span> <span class="toc-text">3. 初始化目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-创建一个测试文件"><span class="toc-number">3.0.4.</span> <span class="toc-text">4. 创建一个测试文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-查看git状态"><span class="toc-number">3.0.5.</span> <span class="toc-text">5. 查看git状态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-添加到暂存区"><span class="toc-number">3.0.6.</span> <span class="toc-text">6. 添加到暂存区</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-暂存区文件提交到仓库"><span class="toc-number">3.0.7.</span> <span class="toc-text">7. 暂存区文件提交到仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-远程提交到仓库"><span class="toc-number">3.0.8.</span> <span class="toc-text">8. 远程提交到仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-克隆操作"><span class="toc-number">3.0.9.</span> <span class="toc-text">1. 克隆操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-本地仓库同步到远程仓库"><span class="toc-number">3.0.10.</span> <span class="toc-text">2. 本地仓库同步到远程仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-windows生成公钥"><span class="toc-number">3.0.11.</span> <span class="toc-text">9. windows生成公钥</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-查看公钥"><span class="toc-number">3.0.12.</span> <span class="toc-text">10. 查看公钥</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-更换仓库"><span class="toc-number">3.0.13.</span> <span class="toc-text">11. 更换仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-git删除未跟踪的文件"><span class="toc-number">3.0.14.</span> <span class="toc-text">12. git删除未跟踪的文件</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
