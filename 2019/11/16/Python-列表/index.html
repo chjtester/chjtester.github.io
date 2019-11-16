@@ -6,13 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Category: 数据库，索引 | 佛系测试</title>
+  <title>Python 列表 | 佛系测试</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="佛系测试">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;categories&#x2F;%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%8C%E7%B4%A2%E5%BC%95&#x2F;index.html">
+  <meta name="description" content="1. 列表 列表是一个有序的数据类型，每个元素都分配一个索引值，索引值从0开始 列表内的数据，可以是不同的数据类型，比如，字符串，列表，元素，字典">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python 列表">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;16&#x2F;Python-%E5%88%97%E8%A1%A8&#x2F;index.html">
 <meta property="og:site_name" content="佛系测试">
+<meta property="og:description" content="1. 列表 列表是一个有序的数据类型，每个元素都分配一个索引值，索引值从0开始 列表内的数据，可以是不同的数据类型，比如，字符串，列表，元素，字典">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-11-16T02:30:18.275Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="佛系测试" type="application/atom+xml">
@@ -158,61 +161,217 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Python-列表" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/06/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B4%A2%E5%BC%95%E5%8E%9F%E7%90%86/" class="archive-article-date">
-  	<time datetime="2019-11-06T14:18:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-06</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/06/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B4%A2%E5%BC%95%E5%8E%9F%E7%90%86/">数据库索引原理</a>
+    <h1 class="article-title" itemprop="name">
+      Python 列表
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/数据库，索引//" class="article-tag-list-link color2">数据库，索引</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        <a href="/2019/11/16/Python-%E5%88%97%E8%A1%A8/" class="archive-article-date">
+  	<time datetime="2019-11-16T02:29:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-16</time>
+</a>
+        
+	
+       
+          <span class="archive-article-date">
+              阅读量 <span id="busuanzi_value_page_pv"></span>
+          </span>
+        
 
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-列表"><a href="#1-列表" class="headerlink" title="1. 列表"></a>1. 列表</h3><ul>
+<li>列表是一个有序的数据类型，每个元素都分配一个索引值，索引值从0开始</li>
+<li>列表内的数据，可以是不同的数据类型，比如，字符串，列表，元素，字典<a id="more"></a>
 
+</li>
+</ul>
+<h3 id="2-定义一个列表"><a href="#2-定义一个列表" class="headerlink" title="2. 定义一个列表"></a>2. 定义一个列表</h3><pre><code>list1 = [1,2,3,4,5,6]
+list2 = [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;,&apos;d&apos;]
+list3 = [
+    {&quot;name&quot;:&quot;zs&quot;},
+    {&quot;name&quot;:&quot;ls&quot;}
+]</code></pre><h3 id="3-列表的循环及continue和break"><a href="#3-列表的循环及continue和break" class="headerlink" title="3. 列表的循环及continue和break"></a>3. 列表的循环及continue和break</h3><pre><code>list1 = []
+list2 = [
+    {&quot;name&quot;: &quot;zs&quot;, &quot;age&quot;: 18},
+    {&quot;name&quot;: &quot;ls&quot;, &quot;age&quot;: 19},
+    {&quot;name&quot;: &quot;ww&quot;, &quot;age&quot;: 60},
+    {&quot;name&quot;: &quot;zl&quot;, &quot;age&quot;: 58}
+]
+
+# 获取list2中所有name的值，放到list1中 
+for x in list2:
+    name = x[&quot;name&quot;]  
+    list1.append(name)
+
+# 获取除&quot;ww&quot;外，所有name的值，放到list1中
+for x in list2:
+    name = x[&quot;name&quot;]
+    if name == &quot;ww&quot;:
+        continue
+    list1.append(name)
+
+# 获取&quot;ls&quot;之前所有name的值，放到list1中
+for x in list2:
+    name = x[&quot;name&quot;]
+    list1.append(name)
+    if name == &quot;ls&quot;:
+        break</code></pre>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>感谢支持<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://yoursite.com/2019/11/16/Python-%E5%88%97%E8%A1%A8/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2019/11/16/Python-%E5%AD%97%E5%85%B8/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Python 字典</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-列表"><span class="toc-number">1.</span> <span class="toc-text">1. 列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-定义一个列表"><span class="toc-number">2.</span> <span class="toc-text">2. 定义一个列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-列表的循环及continue和break"><span class="toc-number">3.</span> <span class="toc-text">3. 列表的循环及continue和break</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
 
+  
+
+  
 
 
           </div>
@@ -243,10 +402,10 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
-		isCategory: true,
+		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
 		root: "/",
