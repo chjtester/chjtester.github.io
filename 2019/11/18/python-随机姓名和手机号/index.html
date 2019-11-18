@@ -6,13 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019 | 佛系测试</title>
+  <title>python 随机姓名和手机号 | 佛系测试</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="佛系测试">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;archives&#x2F;2019&#x2F;page&#x2F;2&#x2F;index.html">
+  <meta name="description" content="代码如下：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python 随机姓名和手机号">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;18&#x2F;python-%E9%9A%8F%E6%9C%BA%E5%A7%93%E5%90%8D%E5%92%8C%E6%89%8B%E6%9C%BA%E5%8F%B7&#x2F;index.html">
 <meta property="og:site_name" content="佛系测试">
+<meta property="og:description" content="代码如下：">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-11-18T12:36:34.450Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="佛系测试" type="application/atom+xml">
@@ -158,159 +161,144 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-python-随机姓名和手机号" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      python 随机姓名和手机号
+    </h1>
+  
+
+        
+        <a href="/2019/11/18/python-%E9%9A%8F%E6%9C%BA%E5%A7%93%E5%90%8D%E5%92%8C%E6%89%8B%E6%9C%BA%E5%8F%B7/" class="archive-article-date">
+  	<time datetime="2019-11-18T12:34:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-18</time>
+</a>
+        
+	
+       
+          <span class="archive-article-date">
+              阅读量 <span id="busuanzi_value_page_pv"></span>
+          </span>
+        
+
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h1><a id="more"></a>
+<pre><code>def randphone():
+    &apos;&apos;&apos;
+    随机手机号
+    &apos;&apos;&apos;
+    prelist = [&quot;130&quot;, &quot;131&quot;, &quot;132&quot;, &quot;133&quot;, &quot;134&quot;, &quot;135&quot;, &quot;136&quot;, &quot;137&quot;, &quot;138&quot;, &quot;139&quot;, &quot;147&quot;, &quot;150&quot;, &quot;151&quot;, &quot;152&quot;,
+            &quot;153&quot;,
+            &quot;155&quot;, &quot;156&quot;, &quot;157&quot;, &quot;158&quot;, &quot;159&quot;, &quot;186&quot;, &quot;187&quot;, &quot;188&quot;]
+    return random.choice(prelist) + &quot;&quot;.join(random.choice(&quot;0123456789&quot;) for i in range(8))
+def randname():
+    xing = [
+        &apos;赵&apos;, &apos;钱&apos;, &apos;孙&apos;, &apos;李&apos;, &apos;周&apos;, &apos;吴&apos;, &apos;郑&apos;, &apos;王&apos;, &apos;冯&apos;, &apos;陈&apos;, &apos;褚&apos;, &apos;卫&apos;, &apos;蒋&apos;, &apos;沈&apos;, &apos;韩&apos;, &apos;杨&apos;, &apos;朱&apos;, &apos;秦&apos;, &apos;尤&apos;, &apos;许&apos;,
+        &apos;何&apos;, &apos;吕&apos;, &apos;施&apos;, &apos;张&apos;, &apos;孔&apos;, &apos;曹&apos;, &apos;严&apos;, &apos;华&apos;, &apos;金&apos;, &apos;魏&apos;, &apos;陶&apos;, &apos;姜&apos;, &apos;戚&apos;, &apos;谢&apos;, &apos;邹&apos;, &apos;喻&apos;, &apos;柏&apos;, &apos;水&apos;, &apos;窦&apos;, &apos;章&apos;,
+        &apos;云&apos;, &apos;苏&apos;, &apos;潘&apos;, &apos;葛&apos;, &apos;奚&apos;, &apos;范&apos;, &apos;彭&apos;, &apos;郎&apos;, &apos;鲁&apos;, &apos;韦&apos;, &apos;昌&apos;, &apos;马&apos;, &apos;苗&apos;, &apos;凤&apos;, &apos;花&apos;, &apos;方&apos;, &apos;俞&apos;, &apos;任&apos;, &apos;袁&apos;, &apos;柳&apos;,
+        &apos;酆&apos;, &apos;鲍&apos;, &apos;史&apos;, &apos;唐&apos;, &apos;费&apos;, &apos;廉&apos;, &apos;岑&apos;, &apos;薛&apos;, &apos;雷&apos;, &apos;贺&apos;, &apos;倪&apos;, &apos;汤&apos;, &apos;滕&apos;, &apos;殷&apos;, &apos;罗&apos;, &apos;毕&apos;, &apos;郝&apos;, &apos;邬&apos;, &apos;安&apos;, &apos;常&apos;,
+        &apos;乐&apos;, &apos;于&apos;, &apos;时&apos;, &apos;傅&apos;, &apos;皮&apos;, &apos;卞&apos;, &apos;齐&apos;, &apos;康&apos;, &apos;伍&apos;, &apos;余&apos;, &apos;元&apos;, &apos;卜&apos;, &apos;顾&apos;, &apos;孟&apos;, &apos;平&apos;, &apos;黄&apos;, &apos;和&apos;, &apos;穆&apos;, &apos;萧&apos;, &apos;尹&apos;,
+        &apos;姚&apos;, &apos;邵&apos;, &apos;堪&apos;, &apos;汪&apos;, &apos;祁&apos;, &apos;毛&apos;, &apos;禹&apos;, &apos;狄&apos;, &apos;米&apos;, &apos;贝&apos;, &apos;明&apos;, &apos;臧&apos;, &apos;计&apos;, &apos;伏&apos;, &apos;成&apos;, &apos;戴&apos;, &apos;谈&apos;, &apos;宋&apos;, &apos;茅&apos;, &apos;庞&apos;,
+        &apos;熊&apos;, &apos;纪&apos;, &apos;舒&apos;, &apos;屈&apos;, &apos;项&apos;, &apos;祝&apos;, &apos;董&apos;, &apos;梁&apos;]
+
+    ming = [
+        &apos;的&apos;, &apos;一&apos;, &apos;是&apos;, &apos;了&apos;, &apos;我&apos;, &apos;不&apos;, &apos;人&apos;, &apos;在&apos;, &apos;他&apos;, &apos;有&apos;, &apos;这&apos;, &apos;个&apos;, &apos;上&apos;, &apos;们&apos;, &apos;来&apos;, &apos;到&apos;, &apos;时&apos;, &apos;大&apos;, &apos;地&apos;, &apos;为&apos;,
+        &apos;子&apos;, &apos;中&apos;, &apos;你&apos;, &apos;说&apos;, &apos;生&apos;, &apos;国&apos;, &apos;年&apos;, &apos;着&apos;, &apos;就&apos;, &apos;那&apos;, &apos;和&apos;, &apos;要&apos;, &apos;她&apos;, &apos;出&apos;, &apos;也&apos;, &apos;得&apos;, &apos;里&apos;, &apos;后&apos;, &apos;自&apos;, &apos;以&apos;,
+        &apos;会&apos;, &apos;家&apos;, &apos;可&apos;, &apos;下&apos;, &apos;而&apos;, &apos;过&apos;, &apos;天&apos;, &apos;去&apos;, &apos;能&apos;, &apos;对&apos;, &apos;小&apos;, &apos;多&apos;, &apos;然&apos;, &apos;于&apos;, &apos;心&apos;, &apos;学&apos;, &apos;么&apos;, &apos;之&apos;, &apos;都&apos;, &apos;好&apos;,
+        &apos;看&apos;, &apos;起&apos;, &apos;发&apos;, &apos;当&apos;, &apos;没&apos;, &apos;成&apos;, &apos;只&apos;, &apos;如&apos;, &apos;事&apos;, &apos;把&apos;, &apos;还&apos;, &apos;用&apos;, &apos;第&apos;, &apos;样&apos;, &apos;道&apos;, &apos;想&apos;, &apos;作&apos;, &apos;种&apos;, &apos;开&apos;, &apos;美&apos;,
+        &apos;总&apos;, &apos;从&apos;, &apos;无&apos;, &apos;情&apos;, &apos;己&apos;, &apos;面&apos;, &apos;最&apos;, &apos;女&apos;, &apos;但&apos;, &apos;现&apos;, &apos;前&apos;, &apos;些&apos;, &apos;所&apos;, &apos;同&apos;, &apos;日&apos;, &apos;手&apos;, &apos;又&apos;, &apos;行&apos;, &apos;意&apos;, &apos;动&apos;,
+        &apos;方&apos;, &apos;期&apos;, &apos;它&apos;, &apos;头&apos;, &apos;经&apos;, &apos;长&apos;, &apos;儿&apos;, &apos;回&apos;, &apos;位&apos;, &apos;分&apos;, &apos;爱&apos;, &apos;老&apos;, &apos;因&apos;, &apos;很&apos;, &apos;给&apos;, &apos;名&apos;, &apos;法&apos;, &apos;间&apos;, &apos;斯&apos;, &apos;知&apos;,
+        &apos;世&apos;, &apos;什&apos;, &apos;两&apos;, &apos;次&apos;, &apos;使&apos;, &apos;身&apos;, &apos;者&apos;, &apos;被&apos;, &apos;高&apos;, &apos;已&apos;, &apos;亲&apos;, &apos;其&apos;, &apos;进&apos;, &apos;此&apos;, &apos;话&apos;, &apos;常&apos;, &apos;与&apos;, &apos;活&apos;, &apos;正&apos;, &apos;感&apos;,
+        &apos;见&apos;, &apos;明&apos;, &apos;问&apos;, &apos;力&apos;, &apos;理&apos;, &apos;尔&apos;, &apos;点&apos;, &apos;文&apos;, &apos;几&apos;, &apos;定&apos;, &apos;本&apos;, &apos;公&apos;, &apos;特&apos;, &apos;做&apos;, &apos;外&apos;, &apos;孩&apos;, &apos;相&apos;, &apos;西&apos;, &apos;果&apos;, &apos;走&apos;,
+        &apos;将&apos;, &apos;月&apos;, &apos;十&apos;, &apos;实&apos;, &apos;向&apos;, &apos;声&apos;, &apos;车&apos;, &apos;全&apos;, &apos;信&apos;, &apos;重&apos;, &apos;三&apos;, &apos;机&apos;, &apos;工&apos;, &apos;物&apos;, &apos;气&apos;, &apos;每&apos;, &apos;并&apos;, &apos;别&apos;, &apos;真&apos;, &apos;打&apos;,
+        &apos;太&apos;, &apos;新&apos;, &apos;比&apos;, &apos;才&apos;, &apos;便&apos;, &apos;夫&apos;, &apos;再&apos;, &apos;书&apos;, &apos;部&apos;, &apos;水&apos;, &apos;像&apos;, &apos;眼&apos;, &apos;等&apos;, &apos;体&apos;, &apos;却&apos;, &apos;加&apos;, &apos;电&apos;, &apos;主&apos;, &apos;界&apos;, &apos;门&apos;,
+        &apos;利&apos;, &apos;海&apos;, &apos;受&apos;, &apos;听&apos;, &apos;表&apos;, &apos;德&apos;, &apos;少&apos;, &apos;克&apos;, &apos;代&apos;, &apos;员&apos;, &apos;许&apos;, &apos;稜&apos;, &apos;先&apos;, &apos;口&apos;, &apos;由&apos;, &apos;死&apos;, &apos;安&apos;, &apos;写&apos;, &apos;性&apos;, &apos;马&apos;,
+        &apos;光&apos;, &apos;白&apos;, &apos;或&apos;, &apos;住&apos;, &apos;难&apos;, &apos;望&apos;, &apos;教&apos;, &apos;命&apos;, &apos;花&apos;, &apos;结&apos;, &apos;乐&apos;, &apos;色&apos;, &apos;更&apos;, &apos;拉&apos;, &apos;东&apos;, &apos;神&apos;, &apos;记&apos;, &apos;处&apos;, &apos;让&apos;, &apos;母&apos;,
+        &apos;父&apos;, &apos;应&apos;, &apos;直&apos;, &apos;字&apos;, &apos;场&apos;, &apos;平&apos;, &apos;报&apos;, &apos;友&apos;, &apos;关&apos;, &apos;放&apos;, &apos;至&apos;, &apos;张&apos;, &apos;认&apos;, &apos;接&apos;, &apos;告&apos;, &apos;入&apos;, &apos;笑&apos;, &apos;内&apos;, &apos;英&apos;, &apos;军&apos;,
+        &apos;候&apos;, &apos;民&apos;, &apos;岁&apos;, &apos;往&apos;, &apos;何&apos;, &apos;度&apos;, &apos;山&apos;, &apos;觉&apos;, &apos;路&apos;, &apos;带&apos;, &apos;万&apos;, &apos;男&apos;, &apos;边&apos;, &apos;风&apos;, &apos;解&apos;, &apos;叫&apos;, &apos;任&apos;, &apos;金&apos;, &apos;快&apos;, &apos;原&apos;,
+        &apos;吃&apos;, &apos;妈&apos;, &apos;变&apos;, &apos;通&apos;, &apos;师&apos;, &apos;立&apos;, &apos;象&apos;, &apos;数&apos;, &apos;四&apos;, &apos;失&apos;, &apos;满&apos;, &apos;战&apos;, &apos;远&apos;, &apos;格&apos;, &apos;士&apos;, &apos;音&apos;, &apos;轻&apos;, &apos;目&apos;, &apos;条&apos;, &apos;呢&apos;,
+        &apos;病&apos;, &apos;始&apos;, &apos;达&apos;, &apos;深&apos;, &apos;完&apos;, &apos;今&apos;, &apos;提&apos;, &apos;求&apos;, &apos;清&apos;, &apos;王&apos;, &apos;化&apos;, &apos;空&apos;, &apos;业&apos;, &apos;思&apos;, &apos;切&apos;, &apos;怎&apos;, &apos;非&apos;, &apos;找&apos;, &apos;片&apos;, &apos;罗&apos;,
+        &apos;钱&apos;, &apos;紶&apos;, &apos;吗&apos;, &apos;语&apos;, &apos;元&apos;, &apos;喜&apos;, &apos;曾&apos;, &apos;离&apos;, &apos;飞&apos;, &apos;科&apos;, &apos;言&apos;, &apos;干&apos;, &apos;流&apos;, &apos;欢&apos;, &apos;约&apos;, &apos;各&apos;, &apos;即&apos;, &apos;指&apos;, &apos;合&apos;, &apos;反&apos;,
+        &apos;题&apos;, &apos;必&apos;, &apos;该&apos;, &apos;论&apos;, &apos;交&apos;, &apos;终&apos;, &apos;林&apos;, &apos;请&apos;, &apos;医&apos;, &apos;晚&apos;, &apos;制&apos;, &apos;球&apos;, &apos;决&apos;, &apos;窢&apos;, &apos;传&apos;, &apos;画&apos;, &apos;保&apos;, &apos;读&apos;, &apos;运&apos;, &apos;及&apos;,
+        &apos;则&apos;, &apos;房&apos;, &apos;早&apos;, &apos;院&apos;, &apos;量&apos;, &apos;苦&apos;, &apos;火&apos;, &apos;布&apos;, &apos;品&apos;, &apos;近&apos;, &apos;坐&apos;, &apos;产&apos;, &apos;答&apos;, &apos;星&apos;, &apos;精&apos;, &apos;视&apos;, &apos;五&apos;, &apos;连&apos;, &apos;司&apos;, &apos;巴&apos;,
+        &apos;奇&apos;, &apos;管&apos;, &apos;类&apos;, &apos;未&apos;, &apos;朋&apos;, &apos;且&apos;, &apos;婚&apos;, &apos;台&apos;, &apos;夜&apos;, &apos;青&apos;, &apos;北&apos;, &apos;队&apos;, &apos;久&apos;, &apos;乎&apos;, &apos;越&apos;, &apos;观&apos;, &apos;落&apos;, &apos;尽&apos;, &apos;形&apos;, &apos;影&apos;,
+        &apos;红&apos;, &apos;爸&apos;, &apos;百&apos;, &apos;令&apos;, &apos;周&apos;, &apos;吧&apos;, &apos;识&apos;, &apos;步&apos;, &apos;希&apos;, &apos;亚&apos;, &apos;术&apos;, &apos;留&apos;, &apos;市&apos;, &apos;半&apos;, &apos;热&apos;, &apos;送&apos;, &apos;兴&apos;, &apos;造&apos;, &apos;谈&apos;, &apos;容&apos;,
+        &apos;极&apos;, &apos;随&apos;, &apos;演&apos;, &apos;收&apos;, &apos;首&apos;, &apos;根&apos;, &apos;讲&apos;, &apos;整&apos;, &apos;式&apos;, &apos;取&apos;, &apos;照&apos;, &apos;办&apos;, &apos;强&apos;, &apos;石&apos;, &apos;古&apos;, &apos;华&apos;, &apos;諣&apos;, &apos;拿&apos;, &apos;计&apos;, &apos;您&apos;,
+        &apos;装&apos;, &apos;似&apos;, &apos;足&apos;, &apos;双&apos;, &apos;妻&apos;, &apos;尼&apos;, &apos;转&apos;, &apos;诉&apos;, &apos;米&apos;, &apos;称&apos;, &apos;丽&apos;, &apos;客&apos;, &apos;南&apos;, &apos;领&apos;, &apos;节&apos;, &apos;衣&apos;, &apos;站&apos;, &apos;黑&apos;, &apos;刻&apos;, &apos;统&apos;,
+        &apos;断&apos;, &apos;福&apos;, &apos;城&apos;, &apos;故&apos;, &apos;历&apos;, &apos;惊&apos;, &apos;脸&apos;, &apos;选&apos;, &apos;包&apos;, &apos;紧&apos;, &apos;争&apos;, &apos;另&apos;, &apos;建&apos;, &apos;维&apos;, &apos;绝&apos;, &apos;树&apos;, &apos;系&apos;, &apos;伤&apos;, &apos;示&apos;, &apos;愿&apos;,
+        &apos;持&apos;, &apos;千&apos;, &apos;史&apos;, &apos;谁&apos;, &apos;准&apos;, &apos;联&apos;, &apos;妇&apos;, &apos;纪&apos;, &apos;基&apos;, &apos;买&apos;, &apos;志&apos;, &apos;静&apos;, &apos;阿&apos;, &apos;诗&apos;, &apos;独&apos;, &apos;复&apos;, &apos;痛&apos;, &apos;消&apos;, &apos;社&apos;, &apos;算&apos;,
+        &apos;义&apos;, &apos;竟&apos;, &apos;确&apos;, &apos;酒&apos;, &apos;需&apos;, &apos;单&apos;, &apos;治&apos;, &apos;卡&apos;, &apos;幸&apos;, &apos;兰&apos;, &apos;念&apos;, &apos;举&apos;, &apos;仅&apos;, &apos;钟&apos;, &apos;怕&apos;, &apos;共&apos;, &apos;毛&apos;, &apos;句&apos;, &apos;息&apos;, &apos;功&apos;,
+        &apos;官&apos;, &apos;待&apos;, &apos;究&apos;, &apos;跟&apos;, &apos;穿&apos;, &apos;室&apos;, &apos;易&apos;, &apos;游&apos;, &apos;程&apos;, &apos;号&apos;, &apos;居&apos;, &apos;考&apos;, &apos;突&apos;, &apos;皮&apos;, &apos;哪&apos;, &apos;费&apos;, &apos;倒&apos;, &apos;价&apos;, &apos;图&apos;, &apos;具&apos;,
+        &apos;刚&apos;, &apos;脑&apos;, &apos;永&apos;, &apos;歌&apos;, &apos;响&apos;, &apos;商&apos;, &apos;礼&apos;, &apos;细&apos;, &apos;专&apos;, &apos;黄&apos;, &apos;块&apos;, &apos;脚&apos;, &apos;味&apos;, &apos;灵&apos;, &apos;改&apos;, &apos;据&apos;, &apos;般&apos;, &apos;破&apos;, &apos;引&apos;, &apos;食&apos;,
+        &apos;仍&apos;, &apos;存&apos;, &apos;众&apos;, &apos;注&apos;, &apos;笔&apos;, &apos;甚&apos;, &apos;某&apos;, &apos;沉&apos;, &apos;血&apos;, &apos;备&apos;, &apos;习&apos;, &apos;校&apos;, &apos;默&apos;, &apos;务&apos;, &apos;土&apos;, &apos;微&apos;, &apos;娘&apos;, &apos;须&apos;, &apos;试&apos;, &apos;怀&apos;,
+        &apos;料&apos;, &apos;调&apos;, &apos;广&apos;, &apos;蜖&apos;, &apos;苏&apos;, &apos;显&apos;, &apos;赛&apos;, &apos;查&apos;, &apos;密&apos;, &apos;议&apos;, &apos;底&apos;, &apos;列&apos;, &apos;富&apos;, &apos;梦&apos;, &apos;错&apos;, &apos;座&apos;, &apos;参&apos;, &apos;八&apos;, &apos;除&apos;, &apos;跑&apos;,
+        &apos;亮&apos;, &apos;假&apos;, &apos;印&apos;, &apos;设&apos;, &apos;线&apos;, &apos;温&apos;, &apos;虽&apos;, &apos;掉&apos;, &apos;京&apos;, &apos;初&apos;, &apos;养&apos;, &apos;香&apos;, &apos;停&apos;, &apos;际&apos;, &apos;致&apos;, &apos;阳&apos;, &apos;纸&apos;, &apos;李&apos;, &apos;纳&apos;, &apos;验&apos;,
+        &apos;助&apos;, &apos;激&apos;, &apos;够&apos;, &apos;严&apos;, &apos;证&apos;, &apos;帝&apos;, &apos;饭&apos;, &apos;忘&apos;, &apos;趣&apos;, &apos;支&apos;, &apos;春&apos;, &apos;集&apos;, &apos;丈&apos;, &apos;木&apos;, &apos;研&apos;, &apos;班&apos;, &apos;普&apos;, &apos;导&apos;, &apos;顿&apos;, &apos;睡&apos;,
+        &apos;展&apos;, &apos;跳&apos;, &apos;获&apos;, &apos;艺&apos;, &apos;六&apos;, &apos;波&apos;, &apos;察&apos;, &apos;群&apos;, &apos;皇&apos;, &apos;段&apos;, &apos;急&apos;, &apos;庭&apos;, &apos;创&apos;, &apos;区&apos;, &apos;奥&apos;, &apos;器&apos;, &apos;谢&apos;, &apos;弟&apos;, &apos;店&apos;, &apos;否&apos;,
+        &apos;害&apos;, &apos;草&apos;, &apos;排&apos;, &apos;背&apos;, &apos;止&apos;, &apos;组&apos;, &apos;州&apos;, &apos;朝&apos;, &apos;封&apos;, &apos;睛&apos;, &apos;板&apos;, &apos;角&apos;, &apos;况&apos;, &apos;曲&apos;, &apos;馆&apos;, &apos;育&apos;, &apos;忙&apos;, &apos;质&apos;, &apos;河&apos;, &apos;续&apos;,
+        &apos;哥&apos;, &apos;呼&apos;, &apos;若&apos;, &apos;推&apos;, &apos;境&apos;, &apos;遇&apos;, &apos;雨&apos;, &apos;标&apos;, &apos;姐&apos;, &apos;充&apos;, &apos;围&apos;, &apos;案&apos;, &apos;伦&apos;, &apos;护&apos;, &apos;冷&apos;, &apos;警&apos;, &apos;贝&apos;, &apos;著&apos;, &apos;雪&apos;, &apos;索&apos;,
+        &apos;剧&apos;, &apos;啊&apos;, &apos;船&apos;, &apos;险&apos;, &apos;烟&apos;, &apos;依&apos;, &apos;斗&apos;, &apos;值&apos;, &apos;帮&apos;, &apos;汉&apos;, &apos;慢&apos;, &apos;佛&apos;, &apos;肯&apos;, &apos;闻&apos;, &apos;唱&apos;, &apos;沙&apos;, &apos;局&apos;, &apos;伯&apos;, &apos;族&apos;, &apos;低&apos;,
+        &apos;玩&apos;, &apos;资&apos;, &apos;屋&apos;, &apos;击&apos;, &apos;速&apos;, &apos;顾&apos;, &apos;泪&apos;, &apos;洲&apos;, &apos;团&apos;, &apos;圣&apos;, &apos;旁&apos;, &apos;堂&apos;, &apos;兵&apos;, &apos;七&apos;, &apos;露&apos;, &apos;园&apos;, &apos;牛&apos;, &apos;哭&apos;, &apos;旅&apos;, &apos;街&apos;,
+        &apos;劳&apos;, &apos;型&apos;, &apos;烈&apos;, &apos;姑&apos;, &apos;陈&apos;, &apos;莫&apos;, &apos;鱼&apos;, &apos;异&apos;, &apos;抱&apos;, &apos;宝&apos;, &apos;权&apos;, &apos;鲁&apos;, &apos;简&apos;, &apos;态&apos;, &apos;级&apos;, &apos;票&apos;, &apos;怪&apos;, &apos;寻&apos;, &apos;杀&apos;, &apos;律&apos;,
+        &apos;胜&apos;, &apos;份&apos;, &apos;汽&apos;, &apos;右&apos;, &apos;洋&apos;, &apos;范&apos;, &apos;床&apos;, &apos;舞&apos;, &apos;秘&apos;, &apos;午&apos;, &apos;登&apos;, &apos;楼&apos;, &apos;贵&apos;, &apos;吸&apos;, &apos;责&apos;, &apos;例&apos;, &apos;追&apos;, &apos;较&apos;, &apos;职&apos;, &apos;属&apos;,
+        &apos;渐&apos;, &apos;左&apos;, &apos;录&apos;, &apos;丝&apos;, &apos;牙&apos;, &apos;党&apos;, &apos;继&apos;, &apos;托&apos;, &apos;赶&apos;, &apos;章&apos;, &apos;智&apos;, &apos;冲&apos;, &apos;叶&apos;, &apos;胡&apos;, &apos;吉&apos;, &apos;卖&apos;, &apos;坚&apos;, &apos;喝&apos;, &apos;肉&apos;, &apos;遗&apos;,
+        &apos;救&apos;, &apos;修&apos;, &apos;松&apos;, &apos;临&apos;, &apos;藏&apos;, &apos;担&apos;, &apos;戏&apos;, &apos;善&apos;, &apos;卫&apos;, &apos;药&apos;, &apos;悲&apos;, &apos;敢&apos;, &apos;靠&apos;, &apos;伊&apos;, &apos;村&apos;, &apos;戴&apos;, &apos;词&apos;, &apos;森&apos;, &apos;耳&apos;, &apos;差&apos;,
+        &apos;短&apos;, &apos;祖&apos;, &apos;云&apos;, &apos;规&apos;, &apos;窗&apos;, &apos;散&apos;, &apos;迷&apos;, &apos;油&apos;, &apos;旧&apos;, &apos;适&apos;, &apos;乡&apos;, &apos;架&apos;, &apos;恩&apos;, &apos;投&apos;, &apos;弹&apos;, &apos;铁&apos;, &apos;博&apos;, &apos;雷&apos;, &apos;府&apos;, &apos;压&apos;,
+        &apos;超&apos;, &apos;负&apos;, &apos;勒&apos;, &apos;杂&apos;, &apos;醒&apos;, &apos;洗&apos;, &apos;采&apos;, &apos;毫&apos;, &apos;嘴&apos;, &apos;毕&apos;, &apos;九&apos;, &apos;冰&apos;, &apos;既&apos;, &apos;状&apos;, &apos;乱&apos;, &apos;景&apos;, &apos;席&apos;, &apos;珍&apos;, &apos;童&apos;, &apos;顶&apos;,
+        &apos;派&apos;, &apos;素&apos;, &apos;脱&apos;, &apos;农&apos;, &apos;疑&apos;, &apos;练&apos;, &apos;野&apos;, &apos;按&apos;, &apos;犯&apos;, &apos;拍&apos;, &apos;征&apos;, &apos;坏&apos;, &apos;骨&apos;, &apos;余&apos;, &apos;承&apos;, &apos;置&apos;, &apos;臓&apos;, &apos;彩&apos;, &apos;灯&apos;, &apos;巨&apos;,
+        &apos;琴&apos;, &apos;免&apos;, &apos;环&apos;, &apos;姆&apos;, &apos;暗&apos;, &apos;换&apos;, &apos;技&apos;, &apos;翻&apos;, &apos;束&apos;, &apos;增&apos;, &apos;忍&apos;, &apos;餐&apos;, &apos;洛&apos;, &apos;塞&apos;, &apos;缺&apos;, &apos;忆&apos;, &apos;判&apos;, &apos;欧&apos;, &apos;层&apos;, &apos;付&apos;,
+        &apos;阵&apos;, &apos;玛&apos;, &apos;批&apos;, &apos;岛&apos;, &apos;项&apos;, &apos;狗&apos;, &apos;休&apos;, &apos;懂&apos;, &apos;武&apos;, &apos;革&apos;, &apos;良&apos;, &apos;恶&apos;, &apos;恋&apos;, &apos;委&apos;, &apos;拥&apos;, &apos;娜&apos;, &apos;妙&apos;, &apos;探&apos;, &apos;呀&apos;, &apos;营&apos;,
+        &apos;退&apos;, &apos;摇&apos;, &apos;弄&apos;, &apos;桌&apos;, &apos;熟&apos;, &apos;诺&apos;, &apos;宣&apos;, &apos;银&apos;, &apos;势&apos;, &apos;奖&apos;, &apos;宫&apos;, &apos;忽&apos;, &apos;套&apos;, &apos;康&apos;, &apos;供&apos;, &apos;优&apos;, &apos;课&apos;, &apos;鸟&apos;, &apos;喊&apos;, &apos;降&apos;,
+        &apos;夏&apos;, &apos;困&apos;, &apos;刘&apos;, &apos;罪&apos;, &apos;亡&apos;, &apos;鞋&apos;, &apos;健&apos;, &apos;模&apos;, &apos;败&apos;, &apos;伴&apos;, &apos;守&apos;, &apos;挥&apos;, &apos;鲜&apos;, &apos;财&apos;, &apos;孤&apos;, &apos;枪&apos;, &apos;禁&apos;, &apos;恐&apos;, &apos;伙&apos;, &apos;杰&apos;,
+        &apos;迹&apos;, &apos;妹&apos;, &apos;藸&apos;, &apos;遍&apos;, &apos;盖&apos;, &apos;副&apos;, &apos;坦&apos;, &apos;牌&apos;, &apos;江&apos;, &apos;顺&apos;, &apos;秋&apos;, &apos;萨&apos;, &apos;菜&apos;, &apos;划&apos;, &apos;授&apos;, &apos;归&apos;, &apos;浪&apos;, &apos;听&apos;, &apos;凡&apos;, &apos;预&apos;,
+        &apos;奶&apos;, &apos;雄&apos;, &apos;升&apos;, &apos;碃&apos;, &apos;编&apos;, &apos;典&apos;, &apos;袋&apos;, &apos;莱&apos;, &apos;含&apos;, &apos;盛&apos;, &apos;济&apos;, &apos;蒙&apos;, &apos;棋&apos;, &apos;端&apos;, &apos;腿&apos;, &apos;招&apos;, &apos;释&apos;, &apos;介&apos;, &apos;烧&apos;, &apos;误&apos;,
+        &apos;乾&apos;, &apos;坤&apos;]
+    for i in range(1, 20):
+        x = random.randint(0, len(xing)-1)
+        m1 = random.randint(0, len(ming)-1)
+        m2 = random.randint(0, len(ming)-1)
+        name = &apos;&apos; + xing[x] + ming[m1] + ming[m2]
+        return name</code></pre>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>感谢支持<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/06/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B4%A2%E5%BC%95%E5%8E%9F%E7%90%86/" class="archive-article-date">
-  	<time datetime="2019-11-06T14:18:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/06/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B4%A2%E5%BC%95%E5%8E%9F%E7%90%86/">数据库索引原理</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/mysql//" class="article-tag-list-link color1">mysql</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/mysql/索引//" class="article-tag-list-link color3">索引</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/06/SQL%E8%AF%AD%E5%8F%A5%E4%BC%98%E5%8C%96/" class="archive-article-date">
-  	<time datetime="2019-11-06T13:27:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/06/SQL%E8%AF%AD%E5%8F%A5%E4%BC%98%E5%8C%96/">SQL语句优化</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/mysql//" class="article-tag-list-link color1">mysql</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/mysql/SQL//" class="article-tag-list-link color4">SQL</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/06/Docker-%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/" class="archive-article-date">
-  	<time datetime="2019-11-06T06:32:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/06/Docker-%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/">Docker 命令大全</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/docker//" class="article-tag-list-link color2">docker</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/06/Flask-session%E6%97%A0%E6%B3%95%E4%BC%A0%E9%80%92%E5%8F%98%E9%87%8F/" class="archive-article-date">
-  	<time datetime="2019-11-06T03:56:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/06/Flask-session%E6%97%A0%E6%B3%95%E4%BC%A0%E9%80%92%E5%8F%98%E9%87%8F/">Flask session无法传递变量</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -320,29 +308,125 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="/categories/python/flask//" class="article-tag-list-link color1">flask</a>
+        			<a href="/categories/python/随机手机号和姓名//" class="article-tag-list-link color4">随机手机号和姓名</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://yoursite.com/2019/11/18/python-%E9%9A%8F%E6%9C%BA%E5%A7%93%E5%90%8D%E5%92%8C%E6%89%8B%E6%9C%BA%E5%8F%B7/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2019/11/18/java%E9%87%8D%E5%86%99%E3%80%81%E9%87%8D%E8%BD%BD%E3%80%81%E5%A4%9A%E6%80%81/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">java重写、重载、多态</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#代码如下："><span class="toc-number">1.</span> <span class="toc-text">代码如下：</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2019/">&amp;laquo; Prev</a><a class="page-number" href="/archives/2019/">1</a><span class="page-number current">2</span>
-    </nav>
   
 
+  
+
+  
 
 
           </div>
@@ -373,8 +457,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
