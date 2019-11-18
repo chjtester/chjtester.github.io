@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="佛系测试">
 <meta property="og:description" content="Mysql语句执行计划">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-18T11:36:53.621Z">
+<meta property="og:updated_time" content="2019-11-18T13:37:03.534Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="佛系测试" type="application/atom+xml">
@@ -212,6 +212,8 @@
 4. possible_key: 可能用到的索引
 5. key: 实际用到的索引
 6. key_len: 索引的长度
+解决复合索引中到底哪个列被使用
+如果复合索引被使用的key_len一直很小，那么就要考虑是否需要这个复合索引
 7. ref: 真正的执行
 8. rows： 当前行任务返回的数据量
 9. extra： 扩展信息

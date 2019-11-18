@@ -6,16 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>SQL语句优化 | 佛系测试</title>
+  <title>SQL优化 | 佛系测试</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="insert语句优化">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SQL语句优化">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;06&#x2F;SQL%E8%AF%AD%E5%8F%A5%E4%BC%98%E5%8C%96&#x2F;index.html">
+<meta property="og:title" content="SQL优化">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;06&#x2F;mysql-%E7%B4%A2%E5%BC%95%E5%A4%B1%E6%95%88&#x2F;index.html">
 <meta property="og:site_name" content="佛系测试">
 <meta property="og:description" content="insert语句优化">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-18T11:37:28.940Z">
+<meta property="og:updated_time" content="2019-11-18T14:25:13.546Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="佛系测试" type="application/atom+xml">
@@ -161,19 +161,19 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-SQL语句优化" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-mysql-索引失效" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      SQL语句优化
+      SQL优化
     </h1>
   
 
         
-        <a href="/2019/11/06/SQL%E8%AF%AD%E5%8F%A5%E4%BC%98%E5%8C%96/" class="archive-article-date">
+        <a href="/2019/11/06/mysql-%E7%B4%A2%E5%BC%95%E5%A4%B1%E6%95%88/" class="archive-article-date">
   	<time datetime="2019-11-06T13:27:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-06</time>
 </a>
         
@@ -192,19 +192,84 @@
 <ul>
 <li>有key时，先把索引去掉，写入之后在加上</li>
 </ul>
-<h1 id="select语句优化"><a href="#select语句优化" class="headerlink" title="select语句优化"></a>select语句优化</h1><h3 id="select-from-stu"><a href="#select-from-stu" class="headerlink" title="select * from stu"></a>select * from stu</h3><ul>
-<li>有索引的情况的，*会丢失索引</li>
-<li>获取了大量不需要的数据，加大IO开销，加大了网络传输开销。</li>
+<h1 id="索引失效的情况"><a href="#索引失效的情况" class="headerlink" title="索引失效的情况"></a>索引失效的情况</h1><ul>
+<li><ol>
+<li>对查询进行优化，尽量避免全表扫描，首先考虑在where 及 order by 涉及的列上建立索引</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>尽量避免在where 子句中使用！=或&lt;&gt;，否则将引擎放弃索引进行全表扫描。</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>尽量避免索引字段避免出现null值，否则会进行全表扫描</li>
+</ol>
+</li>
+<li><ol start="4">
+<li>尽量避免在where中使用or，用union代替</li>
+</ol>
+</li>
+<li><ol start="5">
+<li>%like%前like会导致全表扫描（逆序入库可解决问题）</li>
+</ol>
+</li>
+<li><ol start="6">
+<li>能用between的，尽量不用in和not in</li>
+</ol>
+</li>
+<li><ol start="7">
+<li>尽量避免在where中进行表达式计算</li>
+</ol>
+</li>
+<li><ol start="8">
+<li>使用复合索引时，第一列必须出现在查询条件中，否则会全表扫描</li>
+</ol>
+</li>
+<li><ol start="9">
+<li>子查询的表大，用exists，反之用in</li>
+</ol>
+</li>
+<li><ol start="10">
+<li>并不是所有索引对查询都有效，当索引列重复值过多，可能不会使用索引<h1 id="索引引发的问题"><a href="#索引引发的问题" class="headerlink" title="索引引发的问题"></a>索引引发的问题</h1></li>
+</ol>
+</li>
+<li><ol>
+<li>占用表空间</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>会影响inser和update的效率</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>表数据量大时，切勿在用户使用期间建索引<h1 id="改进索引"><a href="#改进索引" class="headerlink" title="改进索引"></a>改进索引</h1></li>
+</ol>
+</li>
+<li><ol>
+<li>去除重复和无效索引（列中包含null值，大量重复值）</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>多次使用多个字段进行查询，考虑复合索引</li>
+</ol>
+</li>
 </ul>
-<h3 id="in-和-exist"><a href="#in-和-exist" class="headerlink" title="in 和 exist"></a>in 和 exist</h3><ul>
-<li>外表数据量大用in，反之exist</li>
-<li>数据差不多的时候，随便用哪个</li>
-</ul>
-<h3 id="模糊查询（select…like-abc-）-左边写“-”会索引失效；"><a href="#模糊查询（select…like-abc-）-左边写“-”会索引失效；" class="headerlink" title="模糊查询（select…like %abc%） 左边写“%”会索引失效；"></a>模糊查询（select…like %abc%） 左边写“%”会索引失效；</h3><ul>
-<li>优化一：select … like abc%;</li>
-<li>优化二：使用函数索引</li>
-</ul>
-
+<h1 id="show命令"><a href="#show命令" class="headerlink" title="show命令"></a>show命令</h1><pre><code>show VARIABLES  查看系统变量/查询当前生效的配置
+show PROCESSLIST 查看数据库当前的线程（root用户查看的是所有线程。普通用户看到的是自己）           show index from table_name 查看表中的索引
+show create table table_name 查看建表信息
+show table STATUS like ‘pw_bbs_forum’
+关注指标：
+    Data_length  当前表占用大小 单位byte
+    Max_data_length 表的最大容量
+    index_length  索引的占用大小
+show STATUS 查看数据库从启动到现在的系统状态
+show status like &apos;uptime&apos;; 查看数据库本次启动运行时间（单位：秒）
+show [global] status like &apos;com_select&apos;; select语句的执行次数
+show [global] status like &apos;com_insert&apos;; insert语句的执行次数
+show status like &apos;connections&apos;;  查看师徒连接到mysql的连接数（不管成功失败）
+show status like &apos;connections&apos;;  查看线程缓存内的线程的数量
+show status like &apos;threads_connected&apos;; 查看当前打开的链接数
+show status like &apos;threads_created&apos;; 如果threads_create较大，增加线程池</code></pre>
       
 
       
@@ -248,7 +313,7 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="/categories/mysql/SQL//" class="article-tag-list-link color4">SQL</a>
+        			<a href="/categories/mysql/SQL优化//" class="article-tag-list-link color1">SQL优化</a>
         		</li>
       		
 		</ul>
@@ -303,7 +368,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://yoursite.com/2019/11/06/SQL%E8%AF%AD%E5%8F%A5%E4%BC%98%E5%8C%96/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://yoursite.com/2019/11/06/mysql-%E7%B4%A2%E5%BC%95%E5%A4%B1%E6%95%88/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -356,7 +421,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#insert语句优化"><span class="toc-number">1.</span> <span class="toc-text">insert语句优化</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#select语句优化"><span class="toc-number">2.</span> <span class="toc-text">select语句优化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#select-from-stu"><span class="toc-number">2.0.1.</span> <span class="toc-text">select * from stu</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#in-和-exist"><span class="toc-number">2.0.2.</span> <span class="toc-text">in 和 exist</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#模糊查询（select…like-abc-）-左边写“-”会索引失效；"><span class="toc-number">2.0.3.</span> <span class="toc-text">模糊查询（select…like %abc%） 左边写“%”会索引失效；</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#insert语句优化"><span class="toc-number">1.</span> <span class="toc-text">insert语句优化</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#索引失效的情况"><span class="toc-number">2.</span> <span class="toc-text">索引失效的情况</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#索引引发的问题"><span class="toc-number">3.</span> <span class="toc-text">索引引发的问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#改进索引"><span class="toc-number">4.</span> <span class="toc-text">改进索引</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#show命令"><span class="toc-number">5.</span> <span class="toc-text">show命令</span></a></li></ol>
                     </div>
                 </span>
             </div>
