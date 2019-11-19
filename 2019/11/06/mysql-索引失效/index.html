@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="佛系测试">
 <meta property="og:description" content="insert语句优化">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-18T14:25:13.546Z">
+<meta property="og:updated_time" content="2019-11-19T12:58:05.188Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="佛系测试" type="application/atom+xml">
@@ -253,23 +253,14 @@
 <li>多次使用多个字段进行查询，考虑复合索引</li>
 </ol>
 </li>
+<li><ol start="3">
+<li><p>用到&lt;&gt;！=时，该字段最好放到最右边，充分利用索引（最左原则）</p>
+<h1 id="show命令"><a href="#show命令" class="headerlink" title="show命令"></a>show命令</h1><p>show VARIABLES  查看系统变量/查询当前生效的配置<br>show PROCESSLIST 查看数据库当前的线程（root用户查看的是所有线程。普通用户看到的是自己）           show index from table_name 查看表中的索引<br>show create table table_name 查看建表信息<br>show table STATUS like ‘pw_bbs_forum’<br>关注指标：<br>   Data_length  当前表占用大小 单位byte<br>   Max_data_length 表的最大容量<br>   index_length  索引的占用大小<br>show STATUS 查看数据库从启动到现在的系统状态<br>show status like ‘uptime’; 查看数据库本次启动运行时间（单位：秒）<br>show [global] status like ‘com_select’; select语句的执行次数<br>show [global] status like ‘com_insert’; insert语句的执行次数<br>show status like ‘connections’;  查看师徒连接到mysql的连接数（不管成功失败）<br>show status like ‘connections’;  查看线程缓存内的线程的数量<br>show status like ‘threads_connected’; 查看当前打开的链接数<br>show status like ‘threads_created’; 如果threads_create较大，增加线程池</p>
+</li>
+</ol>
+</li>
 </ul>
-<h1 id="show命令"><a href="#show命令" class="headerlink" title="show命令"></a>show命令</h1><pre><code>show VARIABLES  查看系统变量/查询当前生效的配置
-show PROCESSLIST 查看数据库当前的线程（root用户查看的是所有线程。普通用户看到的是自己）           show index from table_name 查看表中的索引
-show create table table_name 查看建表信息
-show table STATUS like ‘pw_bbs_forum’
-关注指标：
-    Data_length  当前表占用大小 单位byte
-    Max_data_length 表的最大容量
-    index_length  索引的占用大小
-show STATUS 查看数据库从启动到现在的系统状态
-show status like &apos;uptime&apos;; 查看数据库本次启动运行时间（单位：秒）
-show [global] status like &apos;com_select&apos;; select语句的执行次数
-show [global] status like &apos;com_insert&apos;; insert语句的执行次数
-show status like &apos;connections&apos;;  查看师徒连接到mysql的连接数（不管成功失败）
-show status like &apos;connections&apos;;  查看线程缓存内的线程的数量
-show status like &apos;threads_connected&apos;; 查看当前打开的链接数
-show status like &apos;threads_created&apos;; 如果threads_create较大，增加线程池</code></pre>
+
       
 
       
