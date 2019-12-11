@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="佛系测试">
 <meta property="og:description" content="java 重载、重写、多态">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-18T12:32:35.112Z">
+<meta property="og:updated_time" content="2019-11-20T15:27:16.219Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="佛系测试" type="application/atom+xml">
@@ -64,7 +64,7 @@
 			</ul>
 		</nav>
 		<nav>
-   			 总文章数 15
+   			 总文章数 16
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -197,8 +197,10 @@
 </li>
 <li><p>重载只与下列因素有关：</p>
 <pre><code>1. 参数个数不同
-2. 参数类型不同
-3. 参数多个类型的顺序不同</code></pre></li>
+2. 参数类型不同</code></pre><ol start="3">
+<li>参数多个类型的顺序不同</li>
+</ol>
+</li>
 </ul>
 <h2 id="2-方法的重写："><a href="#2-方法的重写：" class="headerlink" title="2. 方法的重写："></a>2. 方法的重写：</h2><ul>
 <li>在继承的前提下：方法名称一样，参数列表也一样</li>
@@ -207,8 +209,8 @@
 </ul>
 <h2 id="3-多态："><a href="#3-多态：" class="headerlink" title="3. 多态："></a>3. 多态：</h2><ul>
 <li><p>父类的引用指向子类的实例</p>
-<pre><code>父类名称  对象名 = new 子类名称（）；
-接口名称  对象名 = new 实现类名称（）；</code></pre></li>
+<p>  父类名称  对象名 = new 子类名称（）；<br>  接口名称  对象名 = new 实现类名称（）；</p>
+</li>
 <li><p>多态代码中，成员方法访问规则：new的是谁，优先用谁，没有则向上找</p>
 </li>
 <li><p>多态的好处：无论new哪个子类的对象，方法的调用方式都不会发生变化</p>
